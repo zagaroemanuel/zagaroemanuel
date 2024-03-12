@@ -1,0 +1,201 @@
+<!DOCTYPE html><html data-bs-theme="light" lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"><title>PlateAI</title><link rel="canonical" href="https://plateai.app/bmi.html"><meta property="og:url" content="https://plateai.app/bmi.html"><meta name="description" content="PlateAI is revolutionizing healthy eating approaches in Tanzania by offering personalized meal plans, and pre-paid meal kits  delivery."><link rel="icon" type="image/png" sizes="1200x1200" href="/assets/img/PlateAIFavIcon.png?h=d36e8a82040545202d1e75c32f1b1520"><link rel="icon" type="image/png" sizes="1200x1200" href="/assets/img/MsosiFavIcon.png?h=d4eac83f07adde241404fb9c77bb66e1" media="(prefers-color-scheme: dark)"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"><link rel="stylesheet" href="/assets/css/styles.min.css?h=328390dfd2b786aaf5029f7adab1c0ad"></head><body><div class="container"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap">
+  <style>
+    /* Your CSS styles here */
+    @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap");
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    
+    .box {
+      min-width: 400px;
+      background: #fafafa;
+      border-radius: 38px;
+      text-align: center;
+      position: relative;
+      margin-bottom: 150px;
+    }
+    
+    .input label {
+      display: block;
+      font-size: 18px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 20px;
+    }
+    .input input {
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #17B582;
+      width: 60%;
+      text-align: center;
+      font-size: 28px;
+      font-family: "Nunito", sans-serif;
+    }
+    button#calculate {
+      font-family: "Nunito", sans-serif;
+      color: #fff;
+      background: #17B582;
+      font-size: 16px;
+      border-radius: 12px;
+      padding: 12px 0;
+      width: 100%;
+      outline: none;
+      border: none;
+      transition: background 0.2s ease;
+    }
+    button#calculate:hover {
+      background: #17B520;
+    }
+    .result {
+      padding: 30px 20px;
+    }
+    .result p {
+      font-weight: 600;
+      font-size: 22px;
+      color: #000;
+      margin-bottom: 15px;
+    }
+    .result #result {
+      font-size: 36px;
+      font-weight: 900;
+      color: #17B580;
+      background-color: #eaeaea;
+      display: inline-block;
+      padding: 7px 20px;
+      border-radius: 55px;
+      margin-bottom: 25px;
+    }
+    #comment {
+      color: #000000;
+      font-weight: 800;
+    }
+    /* Youtube link */
+    .link {
+      position: fixed;
+      background-color: #d12322;
+      padding: 23px 40px;
+      right: -90px;
+      border-radius: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      transform: rotate(-90deg);
+      font-size: 18px;
+      font-weight: 500;
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.1s ease-in-out;
+    }
+
+    .link i {
+      padding-left: 7px;
+    }
+
+    .link:hover {
+      text-decoration: underline;
+      background-color: black;
+    }
+  </style>
+
+  <!-- Bootstrap JS scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    // Your existing JavaScript function for BMI calculation
+    function calculateBMI() {
+      // Get height and weight values from the input fields
+      var height = document.getElementById('height').value;
+      var weight = document.getElementById('weight').value;
+
+      // Check if height and weight are provided
+      if (height === '' || weight === '') {
+        alert('Please enter both height and weight');
+        return;
+      }
+
+      // Calculate BMI
+      var heightInMeters = height / 100;
+      var bmi = weight / (heightInMeters * heightInMeters);
+
+      // Display the result
+      document.getElementById('result').innerText = bmi.toFixed(2);
+
+      // Provide a comment based on BMI value
+      var comment = '';
+      if (bmi < 18.5) {
+        comment = 'You are underweight. Focus on a nutrient-rich diet and consult with a healthcare professional for guidance.';
+      } else if (bmi >= 18.5 && bmi < 25) {
+        comment = 'Your weight is normal! Maintain it with a balanced diet and regular exercise.';
+      } else if (bmi >= 25 && bmi < 30) {
+        comment = 'You are overweight. Consider adopting a balanced diet and incorporating regular exercise into your routine';
+      } else {
+        comment = 'You are obese! Consult with a healthcare professional to create a personalized plan for weight management.';
+      }
+
+      document.querySelector('.comment').innerText = comment;
+
+      // Delay the modal appearance by 15 seconds
+      setTimeout(function() {
+        $('#myModal').modal('show');
+      }, 7000);
+    }
+  </script>
+</head>
+<body class="m-0" style="height: 100vh; background: url('https://digitshack.com/codepen/mentor1/pattern-background-desktop.svg'); background-size: cover; background-repeat: no-repeat; font-family: 'Nunito', sans-serif;">
+
+  <div class="justify-content-center" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -30%);">
+    <div class="box">
+      <h1 style="font-weight: bold; font-size: 36px; padding-top: 30px; padding-bottom: 0px;">BMI Calculator</h1>
+      <div style="padding: 0 40px;">
+        <div style="background: #fff; box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15); border-radius: 28px; padding-top: 16px; margin-bottom: 16px;">
+          <label for="height" style="display: block; font-size: 18px; font-weight: 600; color: #000; margin-bottom: 10px;">Height(cm)</label>
+          <input type="number" id="height" style="outline: none; border: none; border-bottom: 1px solid #17B582; width: 60%; text-align: center; font-size: 1.125rem; font-family: 'Nunito', sans-serif;">
+        </div>
+        <div style="background: #fff; box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15); border-radius: 28px; padding-top: 16px; margin-bottom: 16px;">
+          <label for="weight" style="display: block; font-size: 18px; font-weight: 600; color: #000; margin-bottom: 20px;">Weight(kg)</label>
+          <input type="number" id="weight" style="outline: none; border: none; border-bottom: 1px solid #17B582; width: 60%; text-align: center; font-size: 1.125rem; font-family: 'Nunito', sans-serif;">
+        </div>
+        <button id="calculate" onclick="calculateBMI();">Calculate BMI</button>
+      </div>
+      <div style="padding: 30px 20px;">
+        <p style="font-weight: 600; font-size: 22px; color: #000; margin-bottom: 15px;">Your BMI is</p>
+        <div id="result" style="font-size: 36px; font-weight: 900; color: #17B582; background-color: #eaeaea; display: inline-block; padding: 7px 20px; border-radius: 55px; margin-bottom: 25px;">00.00</div>
+        <p class="comment"></p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Plan meals, in your way</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Find balance with plans that align with Food-based dietary guidelines. Get started by clicking the button below.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+          <a href="/plan.html" class="btn btn-warning">Get started</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+</body>
+
+<div class="modal fade firstBlur" role="dialog" tabindex="-1" id="modal-1"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">Plan meals, in your way</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>Find balance with plans that align with Food-based dietary guidelines. Get started by clicking the button below.</p></div><div class="modal-footer"><button class="btn btn-light btn-close" type="button" data-bs-dismiss="modal">Close</button><a class="btn btn-warning" role="button" href="/plan.html">Get started</a></div></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script><script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script><script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script><script src="/assets/js/script.min.js?h=d39169a6143bc38cba2f3dfbb15afe39"></script></body></html>
