@@ -1,0 +1,233 @@
+<!DOCTYPE html><html data-bs-theme="light" lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"><title>PlateAI</title><link rel="canonical" href="https://plateai.app/onboard.html"><meta property="og:url" content="https://plateai.app/onboard.html"><meta name="description" content="PlateAI is revolutionizing healthy eating approaches in Tanzania by offering personalized meal plans, and pre-paid meal kits  delivery."><link rel="icon" type="image/png" sizes="1200x1200" href="/assets/img/PlateAIFavIcon.png?h=d36e8a82040545202d1e75c32f1b1520"><link rel="icon" type="image/png" sizes="1200x1200" href="/assets/img/MsosiFavIcon.png?h=d4eac83f07adde241404fb9c77bb66e1" media="(prefers-color-scheme: dark)"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"><link rel="stylesheet" href="/assets/css/styles.min.css?h=328390dfd2b786aaf5029f7adab1c0ad"></head><body><div class="container mb-5">
+    <div class="row mt-3">
+                    <h4 class="card-title">Welcome!</h4>
+                    <h6 class="text-muted card-subtitle mb-2 lead fs-6"><span style="color: rgb(0, 0, 0);">Please fill key information to get custom plan.</span></h6>
+                    <form id="energyForm">
+                        <!-- Form to collect username -->
+                        <div class="input-group mb-3">
+                            <div class="form-floating" style="width: 100%;">
+                                <input id="name" class="form-control form-control-sm rounded-4" type="text" placeholder="username"/>
+                                <label class="form-label" for="name"><span style="color: rgb(0, 0, 0);">Name</span></label>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="form-floating" style="width: 100%;">
+                                <input id="birthday" class="form-control rounded-4" placeholder="Birthday" type="date" />
+                                <label class="form-label" for="date"><span style="color: rgb(0, 0, 0);">Birthday</span></label>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="form-floating" style="width: 100%;">
+                                <select id="gender" class="form-select rounded-4" placeholder="sex">
+                                    <option value="12" selected>Female</option>
+                                    <option value="13">Male</option>
+                                </select>
+                                <label class="form-label" for="gender"><span style="color: rgb(0, 0, 0);">Gender</span></label>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <div class="form-floating" style="width: 100%;">
+                                <input id="weight" class="form-control rounded-4" type="number" placeholder="weight" />
+                                <label class="form-label" for="weight"><span style="color: rgb(0, 0, 0);">Weight (kg)</span></label>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="form-floating" style="width: 100%;">
+                                <input id="height" class="form-control rounded-4" type="number" placeholder="height" />
+                                <label class="form-label" for="height"><span style="color: rgb(0, 0, 0);">Height (cm)</span></label>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="form-floating" style="width: 100%;">
+                                <select id="pal" class="form-select rounded-4" placeholder="PAL">
+                                    <option value="12" selected>Little to no exercise</option>
+                                    <option value="13">Light exercise (1–3 days/week)</option>
+                                    <option value="14">Moderate exercise (3–5 days/week)</option>
+                                    <option value="15">Heavy exercise (6–7 days/week)</option>
+                                    <option value="16">Very heavy exercise (twice per day, extra heavy workouts)</option>
+                                </select>
+                                <label class="form-label" for="pal"><span style="color: rgb(0, 0, 0);">Physical exercise level</span></label>
+                            </div>
+                        </div>
+                    <button style="width: 90vw;" id="dietaryPreferencesButton" class="btn btn-warning d-block mx-auto" type="button" onclick="toggleDietaryPreferencesContainer(); calculateRecommendations()">Set Dietary Preferences</button>
+
+
+
+
+
+<!-- Container with the ID 'dietaryPreferences' -->
+<div id="dietaryPreferences" style="display: none;">
+    <!-- Add your dietary preferences form or content here -->
+    <h1 class="fs-4 mt-3" style="text-align: start;">Set your dietary preferences</h1>
+    <!-- Message displaying the username and asking for diet selection -->
+    <p id="userMessage" style="text-align: start;color: rgb(128, 128, 128);margin-top: -42px">select diet type you like the most, tick at least one.</p>
+
+    <div class="row" style="margin-right: 0px;margin-left: 0px;margin-bottom: 0px; ">
+        <div class="col" style="padding-right: 0px;padding-left: 0px;">
+            <div style="text-align: center;">
+                <button id="classic-button" class="btn btn-secondary shadow position-relative list-inline-item" type="button" onclick="toggleCheck('classic-button')" style="margin: 2px;margin-right: 2px;margin-left: 2px;height: 48px;width: 150px;font-size: 1em;text-align: center;margin-bottom: 5px;transform: scale(1);max-width: 300px;">
+                    <strong>Classic</strong>
+                    <span class="position-absolute start-50 top-0 translate-middle-x" style="font-size: 0.8em;margin-bottom: 0px;width: 100%;">All food varieties</span>
+                </button>
+                <button id="Vegeterian-button" class="btn btn-secondary shadow position-relative list-inline-item" type="button" onclick="toggleCheck('Vegeterian-button')" style="margin: 2px;margin-right: 2px;margin-left: 2px;height: 48px;width: 150px;font-size: 1em;text-align: center;margin-bottom: 5px;transform: scale(1);max-width: 300px;">
+                    <strong>Vegeterian</strong>
+                    <span class="position-absolute start-50 top-0 translate-middle-x" style="font-size: 0.8em;margin-bottom: 0px;width: 100%;">Plant-Based</span>
+                </button>
+                <button id="Vegan-button" class="btn btn-secondary shadow position-relative list-inline-item" type="button" onclick="toggleCheck('Vegan-button')" style="margin: 2px;margin-right: 2px;margin-left: 2px;height: 48px;width: 150px;font-size: 1em;text-align: center;margin-bottom: 5px;transform: scale(1);max-width: 300px;">
+                    <strong>Vegan</strong>
+                    <span class="position-absolute start-50 top-0 translate-middle-x" style="font-size: 0.8em;margin-bottom: 0px;width: 100%;">Plant-Exclusive</span>
+                </button>
+                <button id="halal-button" class="btn btn-secondary shadow position-relative list-inline-item" type="button" onclick="toggleCheck('halal-button')" style="margin: 2px;margin-right: 2px;margin-left: 2px;height: 48px;width: 150px;font-size: 1em;text-align: center;margin-bottom: 5px;transform: scale(1);max-width: 300px;">
+                    <strong>Halal</strong>
+                    <span class="position-absolute start-50 top-0 translate-middle-x" style="font-size: 0.8em;margin-bottom: 0px;width: 100%;">Islamic Lawful</span>
+                </button>
+                <button id="low-fat-button" class="btn btn-secondary shadow position-relative list-inline-item" type="button" onclick="toggleCheck('low-fat-button')" style="margin: 2px;margin-right: 2px;margin-left: 2px;height: 48px;width: 150px;font-size: 1em;text-align: center;margin-bottom: 5px;transform: scale(1);max-width: 300px;">
+                    <strong>Low-fat</strong>
+                    <span class="position-absolute start-50 top-0 translate-middle-x" style="font-size: 0.8em;margin-bottom: 0px;width: 100%;">Lean Options</span>
+                </button>
+                <button id="Gluten-Free-button" class="btn btn-secondary shadow position-relative list-inline-item" type="button" onclick="toggleCheck('Gluten-Free-button')" style="margin: 2px;margin-right: 2px;margin-left: 2px;height: 48px;width: 150px;font-size: 1em;text-align: center;margin-bottom: 5px;transform: scale(1);max-width: 300px;">
+                    <strong>Gluten-Free</strong>
+                    <span class="position-absolute start-50 top-0 translate-middle-x" style="font-size: 0.8em;margin-bottom: 0px;width: 100%;">Wheat-Free</span>
+                </button>
+                <button id="Keto-button" class="btn btn-secondary shadow position-relative list-inline-item" type="button" onclick="toggleCheck('Keto-button')" style="margin: 2px;margin-right: 2px;margin-left: 2px;height: 48px;width: 150px;font-size: 1em;text-align: center;margin-bottom: 5px;transform: scale(1);max-width: 300px;">
+                    <strong>Keto</strong>
+                    <span class="position-absolute start-50 top-0 translate-middle-x" style="font-size: 0.8em;margin-bottom: 0px;width: 100%;">High-protein</span>
+                </button>
+                <button id="Allergen-Free-button" class="btn btn-secondary shadow position-relative list-inline-item" type="button" onclick="toggleCheck('Allergen-Free-button')" style="margin: 2px;margin-right: 2px;margin-left: 2px;height: 48px;width: 150px;font-size: 1em;text-align: center;margin-bottom: 5px;transform: scale(1);max-width: 300px;">
+                    <strong>Allergen-Free</strong>
+                    <span class="position-absolute start-50 top-0 translate-middle-x" style="font-size: 0.8em;margin-bottom: 0px;width: 100%;">Exclude major allergens</span>
+                </button>
+
+                <!-- Add the onclick attribute for other buttons in a similar way -->
+            </div>
+            <button id="getRecommendationButton" class="btn btn-warning d-block mx-auto" type="button" onclick="calculateRecommendations()" style="margin-top: 16px; width: 90vw;">Get Recommendation</button>
+
+           <!-- Example: Add ID to the "Get recommendation" button -->
+            <h1 class="fs-4 mt-3 mb-0" style="text-align: start;">Your Daily Nutritional Requirement</h1>
+
+        <!-- Display the result here -->
+
+            
+            <p class="fs-6 mt-3" style="text-align: start;">Your energy requirement per day is <span id="energyResult"></span></p>
+            <p>You can shape your dietary habits with an easy-to-follow meal plan. Click <strong>'Generate Plan' </strong>to get started.</p>
+
+            <a class="btn btn-secondary d-block mx-auto" style="width: 90vw;" role="button" href="/plan.html">Generate Plan</a>
+
+        </div>
+
+
+        </div>
+    </div>
+
+              
+          <!-- Script for computation -->
+<!-- Script for computation -->
+
+<script>
+    function calculateRecommendations() {
+        calculateEnergyRequirements();
+    }
+
+    function calculateEnergyRequirements() {
+        // Retrieve input values
+        var weight = parseFloat(document.getElementById('weight').value);
+        var heightCM = parseFloat(document.getElementById('height').value);
+        var heightM = heightCM / 100; // Convert height from centimeters to meters
+        var age = calculateAge(document.getElementById('birthday').value);
+        var gender = document.getElementById('gender').value;
+        var pal = parseFloat(document.getElementById('pal').value);
+
+        // Calculate energy requirements
+        var energyRequirements;
+        if (gender === '13') { // Male
+            energyRequirements = pal / 10 * (13.707 * weight + 492.3 * heightM - 6.673 * age + 77.607);
+        } else { // Female
+            energyRequirements = pal / 10 * (9.74 * weight + 172.9 * heightM - 4.737 * age + 667.051);
+        }
+
+        // Round the result and display without converting to kilocalories
+        var roundedEnergyRequirements = Math.round(energyRequirements);
+        document.getElementById('energyResult').innerHTML = roundedEnergyRequirements + " Cal";
+        document.getElementById('resultContainer').style.display = 'block';
+    }
+
+    // Function to calculate age from birthdate
+    function calculateAge(birthdate) {
+        var today = new Date();
+        var birthdateObj = new Date(birthdate);
+        var age = today.getFullYear() - birthdateObj.getFullYear();
+        var monthDiff = today.getMonth() - birthdateObj.getMonth();
+
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthdateObj.getDate())) {
+            age--;
+        }
+
+        return age;
+    }
+</script>
+
+<script>
+    // Function to update the message with the user's name
+    function updateMessage() {
+        const username = document.getElementById('name').value;
+        const userMessage = document.getElementById('userMessage');
+        userMessage.textContent = `Hi ${username}, select diet type you like the most, tick at least one.`;
+    }
+
+    // Attach the function to the input field's change event
+    document.getElementById('name').addEventListener('input', updateMessage);
+</script>         
+<script>
+  function toggleDietaryPreferencesContainer() {
+    // Use JavaScript to toggle the visibility of the container when the button is clicked
+    var container = document.getElementById('dietaryPreferences');
+    var button = document.getElementById('dietaryPreferencesButton');
+
+    if (container.style.display === 'none') {
+        container.style.display = 'block';
+        button.style.display = 'none';
+    } else {
+        container.style.display = 'none';
+    }
+  }
+</script>
+<script>
+  function toggleCheck(buttonId) {
+      var button = document.getElementById(buttonId);
+
+      // Check if the clicked button is Vegan or Vegetarian
+      if (buttonId === 'Vegan-button' || buttonId === 'Vegeterian-button') {
+          // If it's Vegan, uncheck Vegetarian (and vice versa)
+          var otherButtonId = (buttonId === 'Vegan-button') ? 'Vegeterian-button' : 'Vegan-button';
+          var otherButton = document.getElementById(otherButtonId);
+
+          if (button.classList.contains('btn-outline-secondary')) {
+              button.classList.remove('btn-outline-secondary');
+              button.classList.add('btn-secondary');
+              // Uncheck the other button
+              otherButton.classList.remove('btn-secondary');
+              otherButton.classList.add('btn-outline-secondary');
+          } else {
+              // Toggle back to unchecked state
+              button.classList.remove('btn-secondary');
+              button.classList.add('btn-outline-secondary');
+          }
+      } else {
+          // For other buttons, simply toggle the class
+          button.classList.toggle('btn-secondary');
+          button.classList.toggle('btn-outline-secondary');
+      }
+  }
+
+  // Initialize buttons as unchecked
+  document.addEventListener('DOMContentLoaded', function() {
+    var buttonIds = ['classic-button', 'Vegeterian-button', 'Vegan-button', 'halal-button', 'low-fat-button', 'Gluten-Free-button', 'Keto-button', 'Allergen-Free-button'];
+
+    buttonIds.forEach(function(buttonId) {
+      var button = document.getElementById(buttonId);
+      button.classList.add('btn-outline-secondary');
+      button.classList.remove('btn-secondary');
+    });
+  });
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script><script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script><script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script><script src="/assets/js/script.min.js?h=d39169a6143bc38cba2f3dfbb15afe39"></script></body></html>

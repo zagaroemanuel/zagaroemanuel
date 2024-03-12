@@ -1,0 +1,1217 @@
+<!DOCTYPE html><html data-bs-theme="light" lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"><title>PlateAI</title><link rel="canonical" href="https://plateai.app/plan.html"><meta property="og:url" content="https://plateai.app/plan.html"><meta name="description" content="PlateAI is revolutionizing healthy eating approaches in Tanzania by offering personalized meal plans, and pre-paid meal kits  delivery."><link rel="icon" type="image/png" sizes="1200x1200" href="/assets/img/PlateAIFavIcon.png?h=d36e8a82040545202d1e75c32f1b1520"><link rel="icon" type="image/png" sizes="1200x1200" href="/assets/img/MsosiFavIcon.png?h=d4eac83f07adde241404fb9c77bb66e1" media="(prefers-color-scheme: dark)"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"><link rel="stylesheet" href="/assets/css/styles.min.css?h=328390dfd2b786aaf5029f7adab1c0ad"></head><body style="background: var(--bs-body-color);"><div class="container" style="padding-right: 0px;margin-bottom: 48px;"><div class="row mb-3"><div class="col-8 col-lg-5 mt-3 col-md-5 col-sm-8" id="todayMealPlanCol" style="border-bottom-style: none;"><p class="d-lg-flex justify-content-lg-start align-items-lg-start fs-4" style="margin-top: 0px;margin-bottom: 0px;"><strong><span style="color: rgb(255, 255, 255);">Today's Meal Plan</span></strong></p></div><div class="col d-none d-print-flex d-sm-none d-md-flex d-lg-flex d-xl-flex d-xxl-flex justify-content-center align-items-center mt-3" id="saveTodayMealplanCol"><a class="link-dark d-none d-print-flex d-sm-none d-md-flex d-lg-flex d-xl-flex d-xxl-flex justify-content-center" id="saveDayPlanLink" href="#" style="text-align: center;" onclick="captureAndPrint()"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-capture-filled d-flex align-items-center" id="saveDayPlan" style="text-align: center;width: 1.5em;height: 1.5em;color: white;">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M8 3a1 1 0 0 1 .117 1.993l-.117 .007h-2a1 1 0 0 0 -.993 .883l-.007 .117v2a1 1 0 0 1 -1.993 .117l-.007 -.117v-2a3 3 0 0 1 2.824 -2.995l.176 -.005h2z" stroke-width="0" fill="currentColor"></path>
+  <path d="M4 15a1 1 0 0 1 .993 .883l.007 .117v2a1 1 0 0 0 .883 .993l.117 .007h2a1 1 0 0 1 .117 1.993l-.117 .007h-2a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-2a1 1 0 0 1 1 -1z" stroke-width="0" fill="currentColor"></path>
+  <path d="M18 3a3 3 0 0 1 2.995 2.824l.005 .176v2a1 1 0 0 1 -1.993 .117l-.007 -.117v-2a1 1 0 0 0 -.883 -.993l-.117 -.007h-2a1 1 0 0 1 -.117 -1.993l.117 -.007h2z" stroke-width="0" fill="currentColor"></path>
+  <path d="M20 15a1 1 0 0 1 .993 .883l.007 .117v2a3 3 0 0 1 -2.824 2.995l-.176 .005h-2a1 1 0 0 1 -.117 -1.993l.117 -.007h2a1 1 0 0 0 .993 -.883l.007 -.117v-2a1 1 0 0 1 1 -1z" stroke-width="0" fill="currentColor"></path>
+  <path d="M12 8a4 4 0 1 1 -3.995 4.2l-.005 -.2l.005 -.2a4 4 0 0 1 3.995 -3.8z" stroke-width="0" fill="currentColor"></path>
+</svg></a><script>
+    function captureAndPrint() {
+        // Capture the page
+        window.print();
+    }
+</script><script>
+    function captureAndPrint() {
+        // Capture the page
+        window.print();
+    }
+</script></div><div class="col-3 d-md-flex d-lg-flex justify-content-md-end align-items-md-center justify-content-lg-end align-items-lg-start me-1 mt-3" id="regenerateTodayMealPlan" style="text-align: right;color: var(--bs-body-color);padding-left: 1px;padding-right: 0px;margin-left: 0px;"><a class="link-light" id="regenerateDayplanLink" href="#" onclick="regeneratePage()" style="padding-right: 0px;margin-right: 0px;padding-left: 0px;"><script>
+function regeneratePage() {
+  // Reload the page
+  window.location.reload();
+}
+</script>Generate<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-exchange ms-1" id="regenerateDayIcon" style="width: 1.5em;height: 1.5em;color: var(--bs-body-bg);">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M5 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+  <path d="M19 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+  <path d="M19 8v5a5 5 0 0 1 -5 5h-3l3 -3m0 6l-3 -3"></path>
+  <path d="M5 16v-5a5 5 0 0 1 5 -5h3l-3 -3m0 6l3 -3"></path>
+</svg></a></div></div><div class="row"><div class="col-12 col-md-6 col-lg-4 order-md-1 order-lg-1" id="breakfast"><div id="breakfastheading"><div class="row mt-1"><div class="col-7 col-lg-6" id="breakfastandBreakfastCal"><p class="fw-bold" style="margin-bottom: 0px;color: var(--bs-body-bg);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-cup-hot-fill me-2 mb-2">
+  <path fill-rule="evenodd" d="M.5 6a.5.5 0 0 0-.488.608l1.652 7.434A2.5 2.5 0 0 0 4.104 16h5.792a2.5 2.5 0 0 0 2.44-1.958l.131-.59a3 3 0 0 0 1.3-5.854l.221-.99A.5.5 0 0 0 13.5 6zM13 12.5a2.01 2.01 0 0 1-.316-.025l.867-3.898A2.001 2.001 0 0 1 13 12.5"></path>
+  <path d="m4.4.8-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 3.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 3.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 3 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 4.4.8m3 0-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 6.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 6.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 6 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 7.4.8m3 0-.003.004-.014.019a4.077 4.077 0 0 0-.204.31 2.337 2.337 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.198 3.198 0 0 1-.202.388 5.385 5.385 0 0 1-.252.382l-.019.025-.005.008-.002.002A.5.5 0 0 1 9.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 9.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 9 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 10.4.8"></path>
+</svg><strong>Breakfast</strong></p><p style="margin-top: 0px;margin-bottom: 0px;"><span id="breakfastCal" style="color: var(--bs-gray-400);">405 Cal</span></p></div><div class="col-3 d-flex justify-content-end align-items-start" id="orderbreakfast" style="text-align: center;"></div><div class="col-2 col-lg-2 text-center" id="regeneratebreakfastCol"><a id="bookmarkBreakfastLink" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bookmarks-fill" id="bookmarkBreakfastIcon" style="width: 1.5em;height: 1.5em;color: var(--bs-body-bg);margin-top: 8px;">
+  <path d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5z"></path>
+  <path d="M4.268 1A2 2 0 0 1 6 0h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L13 13.768V2a1 1 0 0 0-1-1z"></path>
+</svg><script>
+    // Function to handle the click event for meal links
+    function handleMealLinkClick(linkId) {
+        document.getElementById(linkId).addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default behavior of the link
+
+            // Add your logic to save the meal here
+            // For demonstration purposes, we'll simulate a successful save
+            // Replace this with your actual saving logic
+            const mealSaved = true;
+
+            if (mealSaved) {
+                alert('Meal saved successfully!');
+            } else {
+                alert('Failed to save the meal. Please try again.');
+            }
+        });
+    }
+
+    // Call the function for each meal link
+    handleMealLinkClick('bookmarkBreakfastLink');
+    handleMealLinkClick('bookmarkeLunchLink');
+    handleMealLinkClick('bookmarkDinnerLink');
+    handleMealLinkClick('bookmarkSnackLink');
+</script>
+</a></div></div></div><div class="row card me-1 shadow-lg" id="breakfastcard" style="background-color: var(--bs-secondary-text-emphasis); margin-right: 3px;margin-left: -4px;"><div class="col-12" id="breakfastCTRPCol"><div class="row" id="breakfastCTRPRow"><div class="col-3 mt-2 mb-1" id="breakfastCTRPimgCol"><img id="breakfastCTRPimg" class="rounded-2" style="width: 100%; max-width: 120px; min-height: 65px; max-height: 120px; min-width: 65px;"></div><div class="col-7" id="breakfastCTRPCol" style="border-bottom-style: outset;border-bottom-color: var(--bs-gray-600);"><p id="breakfastCTRP" class="fw-bold" style="margin: 5px;margin-right: 0px;margin-left: 2px;color: var(--bs-body-bg);"><span id="ctrpFoodItem">Breakfast CTRP</span><span id="ctrpCookingmethod" class="ms-2">Item</span></p><p id="breakfastCTRPCal" style="margin: 5px;margin-right: 0px;margin-left: 2px;"><select id="ctrpServingSizeSelect" style="border-style: none;background: rgba(255,255,255,0);color: #F7CD34;"></select><span id="ctrpCalories" style="color: var(--bs-gray-500);">Energy in Cal</span></p></div><div class="col-2 d-md-flex justify-content-md-end align-items-md-start" id="regeneratebreakfasCTRPCol" style="text-align: center;"><a id="regeneratebreakfastCTRPLink" class="link-dark" href="#">
+    <svg id="regeneratebreakfastCTRPIcon" class="icon icon-tabler icon-tabler-exchange text-light mt-3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="width: 1.2em;height: 1.2em;">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M5 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+        <path d="M19 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+        <path d="M19 8v5a5 5 0 0 1 -5 5h-3l3 -3m0 6l-3 -3"></path>
+        <path d="M5 16v-5a5 5 0 0 1 5 -5h3l-3 -3m0 6l3 -3"></path>
+    </svg>
+</a>
+
+<script>
+  const breakfastCTRPList = [
+            { foodItem: 'Cassava', cookingMethod: 'Boiled', image: 'Cassava Boiled.jpeg', servingSize: '1 cup, 132 g, 1 serving', breakfastCTRPCal: 210 },
+            { foodItem: 'Cassava', cookingMethod: 'airfried', image: 'Cassava aifried.jpeg', servingSize: '1 cup, 132 g, 1 serving', breakfastCTRPCal: 210 },
+            { foodItem: 'Squash', cookingMethod: 'Boiled', image: 'Squash.jpeg', servingSize: '1 cup, 145 g, 1 serving', breakfastCTRPCal: 200 },
+            { foodItem: 'Pumpkin', cookingMethod: 'Boiled', image: 'pumpkin boiled.jpeg', servingSize: '1 cup, 145 g, 1 serving', breakfastCTRPCal: 200 },
+            { foodItem: 'Yam', cookingMethod: 'Boiled', image: 'yam.jpeg', servingSize: '1.25 cup, 230 g, 1 serving', breakfastCTRPCal: 187 },
+            { foodItem: 'Sweet Potato', cookingMethod: 'Boiled', image: 'sweet potatoe boiled.jpg', servingSize: '1 cup, 200 g, 1 serving', breakfastCTRPCal: 225 },
+            { foodItem: 'Brown', cookingMethod: 'Bread', image: 'brown bread.jpg', servingSize: '3 small rolls, 75 g, 1 serving', breakfastCTRPCal: 200 },
+            { foodItem: 'White', cookingMethod: 'Bread (thick)', image: 'white bread.jpg', servingSize: '3 slices, 90 g, 1 serving', breakfastCTRPCal: 225 },
+            { foodItem: 'African', cookingMethod: 'Doughnut', image: 'african doughnuts.jpeg', servingSize: '2 medium, 90 g, 1 serving', breakfastCTRPCal: 200 },
+            { foodItem: 'Pancake', cookingMethod: '(chapati)', image: 'Chapati.jpeg', servingSize: '90 g, 1 serving', breakfastCTRPCal: 200 },
+            { foodItem: 'Fluffy', cookingMethod: 'pancake', image: 'fluffy pancake.jpeg', servingSize: '90 g, 1 serving', breakfastCTRPCal: 200 },
+            { foodItem: 'Corn', cookingMethod: 'Boiled', image: 'corn boiled.jpeg', servingSize: '1 medium, 90 g, 1 serving', breakfastCTRPCal: 200 },
+            { foodItem: 'Andazi', cookingMethod: '', image: 'andazi.jpeg', servingSize: '2 large, 90 g, 1 serving', breakfastCTRPCal: 200 },
+            { foodItem: 'Rice Bun', cookingMethod: '(kitumbua)', image: 'rice buns.jpeg', servingSize: '3 medium, 90 g, 1 serving', breakfastCTRPCal: 200 },
+            { foodItem: 'Sweet Potato', cookingMethod: 'Fried', image: 'Sweet potatoe fried.jpeg', servingSize: '1 cup, 200 g, 1 serving', breakfastCTRPCal: 225 },
+            { foodItem: 'Banana', cookingMethod: 'Boiled', image: 'Boiled banana.jpg', servingSize: '2 medium, 145 g, 1 serving', breakfastCTRPCal: 200 },
+            { foodItem: 'Banana', cookingMethod: 'Boiled', image: 'Boiled banana.jpg', servingSize: '1 cup, 145 g, 1 serving', breakfastCTRPCal: 200 },
+
+            // ... other breakfast CTRP items
+        ];
+
+    function generateRandomBreakfastCTRP() {
+        // Get a random breakfast CTRP item
+        const randomCTRPIndex = Math.floor(Math.random() * breakfastCTRPList.length);
+        const randomBreakfastCTRP = breakfastCTRPList[randomCTRPIndex];
+
+        // Display the random CTRP item on the webpage
+        document.getElementById('ctrpFoodItem').innerText = randomBreakfastCTRP.foodItem;
+        document.getElementById('ctrpCookingmethod').innerText = randomBreakfastCTRP.cookingMethod;
+        
+        // Update the food item image
+        document.getElementById('breakfastCTRPimg').src = randomBreakfastCTRP.image;
+
+        // Populate the CTRP serving size options
+        const ctrpServingSizeSelect = document.getElementById('ctrpServingSizeSelect');
+        ctrpServingSizeSelect.innerHTML = ""; // Clear previous options
+        randomBreakfastCTRP.servingSize.split(',').forEach((option, index) => {
+            const optionElement = document.createElement('option');
+            optionElement.value = index;
+            optionElement.textContent = option.trim();
+            ctrpServingSizeSelect.appendChild(optionElement);
+        });
+
+        // Display CTRP calories based on the selected serving size
+        ctrpServingSizeSelect.addEventListener('change', () => {
+            const selectedOption = ctrpServingSizeSelect.options[ctrpServingSizeSelect.selectedIndex].textContent;
+            const calories = randomBreakfastCTRP.breakfastCTRPCal;
+            document.getElementById('ctrpCalories').innerText = ` ${calories} Cal`;
+        });
+
+        // Function to update CTRP calories based on the selected serving size
+        function updateCTRPCalories() {
+            const selectedOption = ctrpServingSizeSelect.options[ctrpServingSizeSelect.selectedIndex].textContent;
+            const calories = randomBreakfastCTRP.breakfastCTRPCal;
+            document.getElementById('ctrpCalories').innerText = ` ${calories} Cal`;
+        }
+
+        // Initial call to set calories when the page loads
+        updateCTRPCalories();
+
+        // Event listener to update calories when serving size select is changed
+        ctrpServingSizeSelect.addEventListener('change', updateCTRPCalories);
+    }
+
+    // Call the function on page load
+    generateRandomBreakfastCTRP();
+
+    // Attach click event to the link to regenerate breakfast CTRP
+    document.getElementById('regeneratebreakfastCTRPLink').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent the link from navigating
+        generateRandomBreakfastCTRP();
+    });
+</script></div></div></div><div class="col-12" id="breakfastASFCol"><div class="row mb-1"><div class="col-3"><img id="breakfastASFimg" class="rounded-2" style="width: 100%; max-width: 120px; min-height: 65px; max-height: 120px; min-width: 65px;"></div><div class="col-7" style="border-bottom-style: outset;border-bottom-color: var(--bs-gray-600);"><p id="breakfastASF" class="fw-bold" style="margin: 5px;margin-right: 0px;margin-left: 2px;color: var(--bs-body-bg);padding-top: 0px;"><span id="asfFoodItem"><strong>Text</strong></span><span id="asfCookingmethod" class="ms-2">Text</span></p><p id="breakfastASFCal" style="margin: 5px;margin-right: -40px;margin-left: 2px;"><select id="asfServingSizeSelect" style="border-style: none;background: rgba(255,255,255,0);color: #F7CD34;"></select><span id="asfCalories" style="color: var(--bs-gray-500);">Text</span></p></div><div class="col-2 d-md-flex justify-content-md-end align-items-md-start" style="text-align: center;"><a id="regeneratebreakfastASFLink" class="link-dark" href="#">
+    <svg id="regeneratebreakfastASFIcon-1" class="icon icon-tabler icon-tabler-exchange text-light" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="width: 1.2em;height: 1.2em;">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M5 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+        <path d="M19 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+        <path d="M19 8v5a5 5 0 0 1 -5 5h-3l3 -3m0 6l-3 -3"></path>
+        <path d="M5 16v-5a5 5 0 0 1 5 -5h3l-3 -3m0 6l3 -3"></path>
+    </svg>
+</a>
+<script>
+    // Get a random breakfast ASF item
+    const breakfastASFList = [
+        { foodItem: 'Beef Liver', cookingMethod: 'Roasted', image: 'beef liver.jpg', servingSize: '2 matchbox size, 65 g, 1 serving', breakfastASFCal: 137 },
+        { foodItem: 'Chicken', cookingMethod: 'Baked', image: 'chicken baked.jpeg', servingSize: '3 matchbox size, 95 g, 1 serving', breakfastASFCal: 135 },
+        { foodItem: 'Egg', cookingMethod: 'Scrambled', image: 'egg scrambled.jpeg', servingSize: '2 large, 100 g, 1 serving', breakfastASFCal: 135 },
+        { foodItem: 'Egg', cookingMethod: 'sunny side up', image: 'Egg sunny side up.jpg', servingSize: '2 large, 100 g, 1 serving', breakfastASFCal: 135 },
+        { foodItem: 'Egg', cookingMethod: 'Omelete', image: 'egg omelete.jpg', servingSize: '2 large, 100 g, 1 serving', breakfastASFCal: 135 },
+        { foodItem: 'Egg', cookingMethod: 'Boiled', image: 'egg boiled.jpeg', servingSize: '2 large, 100 g, 1 serving', breakfastASFCal: 135 },
+        { foodItem: 'Fresh Milk', cookingMethod: 'Boiled', image: 'fresh milk boiled.jpeg', servingSize: '1 cup, 250 ml, 1 serving', breakfastASFCal: 120 },
+        { foodItem: 'Beef', cookingMethod: 'Soup', image: 'beef soup.jpg', servingSize: '2 matchbox size, 65 g, 1 serving', breakfastASFCal: 137 },
+        { foodItem: 'Fish', cookingMethod: 'Soup', image: 'Fish Soup.jpg', servingSize: '3 matchbox size, 115 g, 1 serving', breakfastASFCal: 135 },
+        ];
+
+    // Get a random breakfast ASF item
+    const randomASFIndex = Math.floor(Math.random() * breakfastASFList.length);
+    let randomBreakfastASF = breakfastASFList[randomASFIndex];
+
+    // Display the random ASF item on the webpage
+    document.getElementById('asfFoodItem').innerText = randomBreakfastASF.foodItem;
+    document.getElementById('asfCookingmethod').innerText = randomBreakfastASF.cookingMethod;
+    document.getElementById('breakfastASFimg').src = randomBreakfastASF.image; // Set the initial image
+
+    // Populate the ASF serving size options
+    const asfServingSizeSelect = document.getElementById('asfServingSizeSelect');
+    randomBreakfastASF.servingSize.split(',').forEach((option, index) => {
+        const optionElement = document.createElement('option');
+        optionElement.value = index;
+        optionElement.textContent = option.trim();
+        asfServingSizeSelect.appendChild(optionElement);
+    });
+
+    // Display ASF calories based on the selected serving size
+    asfServingSizeSelect.addEventListener('change', updateASFCalories);
+
+    // Function to update ASF calories based on the selected serving size
+    function updateASFCalories() {
+        const selectedOption = asfServingSizeSelect.options[asfServingSizeSelect.selectedIndex].textContent;
+        const calories = randomBreakfastASF.breakfastASFCal;
+        document.getElementById('asfCalories').innerText = ` ${calories} Cal`;
+        document.getElementById('breakfastASFimg').src = randomBreakfastASF.image; // Update the image when serving size changes
+    }
+
+    // Initial call to set calories and image when the page loads
+    updateASFCalories();
+
+    // Event listener to update calories and image when serving size select is changed
+    asfServingSizeSelect.addEventListener('change', updateASFCalories);
+
+    function generateRandomBreakfastASF() {
+        // Get a random breakfast ASF item
+        const randomASFIndex = Math.floor(Math.random() * breakfastASFList.length);
+        randomBreakfastASF = breakfastASFList[randomASFIndex];
+
+        // Display the random ASF item on the webpage
+        document.getElementById('asfFoodItem').innerText = randomBreakfastASF.foodItem;
+        document.getElementById('asfCookingmethod').innerText = randomBreakfastASF.cookingMethod;
+
+        // Populate the ASF serving size options
+        const asfServingSizeSelect = document.getElementById('asfServingSizeSelect');
+        asfServingSizeSelect.innerHTML = ""; // Clear previous options
+        randomBreakfastASF.servingSize.split(',').forEach((option, index) => {
+            const optionElement = document.createElement('option');
+            optionElement.value = index;
+            optionElement.textContent = option.trim();
+            asfServingSizeSelect.appendChild(optionElement);
+        });
+
+        // Display ASF calories based on the selected serving size
+        asfServingSizeSelect.addEventListener('change', updateASFCalories);
+
+        // Initial call to set calories and image when the page loads
+        updateASFCalories();
+    }
+
+    // Call the function on page load
+    generateRandomBreakfastASF();
+
+    // Attach click event to the link to regenerate breakfast ASF
+    document.getElementById('regeneratebreakfastASFLink').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent the link from navigating
+        generateRandomBreakfastASF();
+    });
+</script></div></div></div><div class="col" id="breakfastFruitCol"><div class="row mb-2"><div class="col-3">  <img id="breakfastFruitImg" class="rounded-2" style="width: 100%;max-width: 120px;min-height: 65px;max-height: 120px;min-width: 65px;" /></div><div class="col-7"><p id="breakfastFruit" class="fw-bold" style="margin: 5px;margin-right: 0px;margin-left: 2px;color: var(--bs-body-bg);"><span id="breakfastFruitFoodItem"><strong>Text</strong></span><span id="breakfastFruitCookingmethod" class="ms-2">Text</span></p><p id="breakfastFruitCal" style="margin: 5px;margin-right: 0px;margin-left: 2px;"><select id="breakfastFruit_ServingSizeSelect" style="border-style: none;background: rgba(255,255,255,0);color: #F7CD34;"></select><span id="breakfastFruit_Calories" style="color: var(--bs-gray-500);">Text</span></p></div><div class="col-2 d-md-flex justify-content-md-end align-items-md-start" style="text-align: center;">
+  <a id="regeneratebreakfastFruitLink" class="link-dark" href="#">
+    <svg id="regeneratebreakfastFruitIcon" class="icon icon-tabler icon-tabler-exchange text-light" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="width: 1.2em;height: 1.2em;">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M5 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+      <path d="M19 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+      <path d="M19 8v5a5 5 0 0 1 -5 5h-3l3 -3m0 6l-3 -3"></path>
+      <path d="M5 16v-5a5 5 0 0 1 5 -5h3l-3 -3m0 6l3 -3"></path>
+    </svg>
+  </a>
+
+  <!-- Breakfast Fruit script -->
+  <script>
+    function initializeBreakfastFruit() {
+      // Simulated database for breakfast Fruit food items
+    const breakfastFruitList = [
+        { foodItem: 'Apples', cookingMethod: '(7 cm ⌀)', image: 'Apple.jpeg', servingSize: '1 medium, 140 g, 1 serving', calories: 75 },
+        { foodItem: 'Avocado', cookingMethod: 'Ripe, cut', image: 'Avocado cut.jpeg', servingSize: '1/2 small, 140 g, 1 serving', calories: 80 },
+        { foodItem: 'Ripe Banana', cookingMethod: '(18 cm)', image: 'Ripe Banana.jpeg', servingSize: '1 medium, 120 g, 1 serving', calories: 120 },
+        { foodItem: 'Date', cookingMethod: 'Dried', image:  "https://spoonacular.com/cdn/ingredients_100x100/dates.jpg", servingSize: '53 g, 1 serving', calories: 80 },
+        { foodItem: 'Grape', cookingMethod: '(Red)', image: 'Avocado cut.jpeg', servingSize: '1 cup, 90 g, 1 serving', calories: 60.3 },
+        { foodItem: 'Guavas (Pera)', cookingMethod: 'Raw', image: 'https://spoonacular.com/cdn/ingredients_100x100/guava.jpg', servingSize: '2 medium, 110 g, 1 serving', calories: 65 },
+        { foodItem: 'Mango', cookingMethod: 'Ripe, diced', image: 'Mango Ripe.jpeg', servingSize: '1 cup cut, 165 g, 1 serving', calories: 106.2 },
+        { foodItem: 'Orange', cookingMethod: '(7.5-8 cm)', image: 'Orange.jpeg', servingSize: '1 large, 185 g, 1 serving', calories: 80 },
+        { foodItem: 'Papaya', cookingMethod: 'Ripe', image: 'Papaya.jpg', servingSize: '1 cup cut, 145 g, 1 serving', calories: 51 },
+        { foodItem: 'Pears,', cookingMethod: 'raw', image: 'Pears.jpeg', servingSize: '1 small, 150 g, 1 serving', calories: 85 },
+        { foodItem: 'Pineapple', cookingMethod: 'Raw', image: 'pineapple.jpeg', servingSize: '1 wedge, 140 g, 1 serving', calories: 80 },
+        { foodItem: 'Tamarind', cookingMethod: '', image: 'ubuyu.jpeg', servingSize: '0.25 cup, 30 g, 1 serving', calories: 75 },
+        { foodItem: 'Chenza', cookingMethod: '(5-6 cm ⌀)', image: 'chenza.jpeg', servingSize: '2 small, 150 g, 1 serving', calories: 84 },
+        { foodItem: 'Watermelon', cookingMethod: 'Raw', image: 'watermelon.jpeg', servingSize: '1.5 cup cut, 230 g, 1 serving', calories: 67 },
+        { foodItem: 'Jackfruit', cookingMethod: '(Fenesi)', image: 'Jackfruit.jpeg', servingSize: '1 cup, 154 g, 1 serving', calories: 60 },
+        { foodItem: 'Soursop ', cookingMethod: '(Stafeli)', image: 'soursop.jpeg', servingSize: '1 cup, 155 g, 1 serving', calories: 60 },
+        { foodItem: 'Annona', cookingMethod: '(Topetope)', image: 'annona.jpeg', servingSize: '1 cup, 154 g, 1 serving', calories: 60 },
+        { foodItem: 'Plums ', cookingMethod: 'Tunda damu', image: 'local plums.jpeg', servingSize: '1 cup, 154 g, 1 serving', calories: 60 },
+    ];
+
+      function generateRandomBreakfastFruit() {
+        // Get a random breakfast Fruit item
+        const randomBreakfastFruitIndex = Math.floor(Math.random() * breakfastFruitList.length);
+        const randomBreakfastFruit = breakfastFruitList[randomBreakfastFruitIndex];
+
+        // Display the random breakfast Fruit item on the webpage
+        document.getElementById('breakfastFruitFoodItem').innerText = randomBreakfastFruit.foodItem;
+        document.getElementById('breakfastFruitCookingmethod').innerText = randomBreakfastFruit.cookingMethod;
+
+        // Update the image source
+        document.getElementById('breakfastFruitImg').src = randomBreakfastFruit.image;
+
+        // Populate the breakfast Fruit serving size options
+        const breakfastFruit_ServingSizeSelect = document.getElementById('breakfastFruit_ServingSizeSelect');
+        breakfastFruit_ServingSizeSelect.innerHTML = ""; // Clear previous options
+        randomBreakfastFruit.servingSize.split(',').forEach((option, index) => {
+          const optionElement = document.createElement('option');
+          optionElement.value = index;
+          optionElement.textContent = option.trim();
+          breakfastFruit_ServingSizeSelect.appendChild(optionElement);
+        });
+
+        // Display breakfast Fruit calories based on the selected serving size
+        breakfastFruit_ServingSizeSelect.addEventListener('change', () => {
+          const selectedOption = breakfastFruit_ServingSizeSelect.options[breakfastFruit_ServingSizeSelect.selectedIndex].textContent;
+          const calories = randomBreakfastFruit.calories;
+          document.getElementById('breakfastFruit_Calories').innerText = ` ${calories} Cal`;
+        });
+
+        // Function to update breakfast Fruit calories based on the selected serving size
+        function updateBreakfastFruitCalories() {
+          const selectedOption = breakfastFruit_ServingSizeSelect.options[breakfastFruit_ServingSizeSelect.selectedIndex].textContent;
+          const calories = randomBreakfastFruit.calories;
+          document.getElementById('breakfastFruit_Calories').innerText = ` ${calories} Cal`;
+        }
+
+        // Initial call to set calories when the page loads
+        updateBreakfastFruitCalories();
+
+        // Event listener to update calories when serving size select is changed
+        breakfastFruit_ServingSizeSelect.addEventListener('change', updateBreakfastFruitCalories);
+      }
+
+      // Call the function on page load
+      generateRandomBreakfastFruit();
+
+      // Attach click event to the link to regenerate breakfast Fruit
+      document.getElementById('regeneratebreakfastFruitLink').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent the link from navigating
+        generateRandomBreakfastFruit();
+      });
+    }
+
+    // Initialize breakfast Fruit
+    initializeBreakfastFruit();
+  </script></div></div></div></div></div><div class="col-12 col-md-6 col-lg-4 order-md-2 order-lg-2" id="Lunch"><div id="breakfastheading-1"><div class="row mt-1"><div class="col-7 col-lg-6" id="breakfastandBreakfastCal-1"><p class="fw-bold" style="margin-top: 0px;margin-bottom: 0px;color: var(--bs-body-bg);"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" class="me-2 mb-2"><rect fill="none" height="24" width="24"></rect><path d="M22,12L22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,3.69,2.47,6.86,6,8.25V22h8v-1.75C19.53,18.86,22,15.69,22,12z M20,12h-4 V5.08C18.39,6.47,20,9.05,20,12z M14,4.26V12h-4V4.26C10.64,4.1,11.31,4,12,4S13.36,4.1,14,4.26z M4,12c0-2.95,1.61-5.53,4-6.92V12 H4z"></path></svg><strong>Lunch</strong></p><p style="margin-top: 0px;margin-bottom: 0px;"><span id="lunchCal" style="color: var(--bs-gray-400);">Lunch Calories</span></p></div><div class="col-3 d-flex justify-content-end align-items-start" id="orderbreakfast-1" style="text-align: center;"></div><div class="col-2 text-center" id="regeneratebreakfastCol-1"><a id="bookmarkeLunchLink" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bookmarks-fill" id="bookmarkeLunchIcon" style="width: 1.5em;height: 1.5em;color: var(--bs-body-bg);margin-top: 8px;">
+  <path d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5z"></path>
+  <path d="M4.268 1A2 2 0 0 1 6 0h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L13 13.768V2a1 1 0 0 0-1-1z"></path>
+</svg></a></div></div></div><div class="row card me-1 shadow-lg" id="lunchcard" style="background-color: var(--bs-secondary-text-emphasis); margin-right: 3px;margin-left: -4px;"><div class="col-12" id="lunchCTRPCol"><div class="row mt-2 mb-1" id="lunchCTRPRow"><div class="col-3" id="lunchCTRPimgCol"><img id="lunchCTRPimg" class="rounded-2" style="width: 100%; max-width: 120px; min-height: 65px; max-height: 120px; min-width: 65px;"></div><div class="col-7" id="lunchCTRPCol" style="border-bottom-style: outset;border-bottom-color: var(--bs-gray-600);"><p id="lunchCTRP" class="fw-bold" style="margin: 5px;margin-right: 0px;margin-left: 2px;color: var(--bs-body-bg);"><span id="lunchctrpFoodItem"><strong>Text</strong></span><span id="lunchctrpCookingmethod" class="ms-2">Text</span></p><p id="lunchCTRPCal" style="margin: 5px;margin-right: 0px;margin-left: 2px;"><select id="lunchCTRP_ServingSizeSelect" style="border-style: none;background: rgba(255,255,255,0);color: #F7CD34;"></select><span id="lunchCTRP_Calories" style="color: var(--bs-gray-500);">Text</span></p></div><div class="col-2 d-md-flex justify-content-md-end align-items-md-start" id="regeneratelunchCTRPCol" style="text-align: center;"><a id="regenerateLunchCTRPLink" class="link-dark" href="#">
+    <svg id="regenerateLunchCTRPIcon" class="icon icon-tabler icon-tabler-exchange text-light mt-2" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="width: 1.2em;height: 1.2em;">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M5 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+        <path d="M19 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+        <path d="M19 8v5a5 5 0 0 1 -5 5h-3l3 -3m0 6l-3 -3"></path>
+        <path d="M5 16v-5a5 5 0 0 1 5 -5h3l-3 -3m0 6l3 -3"></path>
+    </svg>
+</a>
+
+<script>
+      const lunchCTRPList = [
+      { foodItem: 'Maize, Dona', cookingMethod: 'Ugali', image: 'Ugali.jpeg', servingSize: '0.75 cup, 161 g, 1 serving', lunchCTRPCal: 210 },
+      { foodItem: 'Maize, sembe', cookingMethod: 'Ugali', image: 'Ugali.jpeg', servingSize: '0.75 cup, 161 g, 1 serving', lunchCTRPCal: 210 },
+      { foodItem: 'Sorghum', cookingMethod: 'Ugali', image: 'Sorghum Ugali.jpeg', servingSize: '0.75 cup, 161 g, 1 serving', lunchCTRPCal: 210 },
+      { foodItem: 'Maize and Sorghum', cookingMethod: 'Ugali', image: 'Sorghum and maize Ugali.jpeg', servingSize: '0.75 cup, 161 g, 1 serving', lunchCTRPCal: 210 },
+      { foodItem: 'Maize and Cassava', cookingMethod: 'Ugali', image: 'maize and cassava ugali.jpeg', servingSize: '0.75 cup, 161 g, 1 serving', lunchCTRPCal: 210 },
+      { foodItem: 'Rice', cookingMethod: 'Biryani', image: 'Rice biryani.jpeg', servingSize: '1 cup, 160 g, 1 serving', lunchCTRPCal: 205 },
+      { foodItem: 'Rice', cookingMethod: 'Cooked', image: 'rice cooked.jpeg', servingSize: '1 cup, 160 g, 1 serving', lunchCTRPCal: 205 },
+        { foodItem: 'Spaghetti', cookingMethod: 'Boiled', image: 'spaghetti.jpg', servingSize: '1 cup, 160 g, 1 serving', lunchCTRPCal: 205 },
+      { foodItem: 'Potatoes', cookingMethod: 'Air Fried', image: 'Potato wedges, aifried.jpeg', servingSize: '1 cup, 145 g, 1 serving', lunchCTRPCal: 205 },          
+      { foodItem: 'Rice', cookingMethod: 'Fried', image: 'Fried Rice.jpeg', servingSize: '1 cup, 160 g, 1 serving', lunchCTRPCal: 205 },
+      { foodItem: 'Rice', cookingMethod: 'Pilau', image: 'Rice pilau.jpeg', servingSize: '1 cup, 160 g, 1 serving', lunchCTRPCal: 205 },
+      // Add other lunch items
+  ];
+
+    function generateRandomLunchCTRP() {
+        // Get a random lunch CTRP item
+        const randomLunchCTRPIndex = Math.floor(Math.random() * lunchCTRPList.length);
+        const randomLunchCTRP = lunchCTRPList[randomLunchCTRPIndex];
+
+        // Display the random CTRP item on the webpage
+        document.getElementById('lunchCTRPimg').src = randomLunchCTRP.image; // Update the image source
+        document.getElementById('lunchctrpFoodItem').innerText = randomLunchCTRP.foodItem;
+        document.getElementById('lunchctrpCookingmethod').innerText = randomLunchCTRP.cookingMethod;
+
+        // Populate the CTRP serving size options for lunch, multiplying each value by two
+        const lunchCTRP_ServingSizeSelect = document.getElementById('lunchCTRP_ServingSizeSelect');
+        lunchCTRP_ServingSizeSelect.innerHTML = ""; // Clear previous options
+        randomLunchCTRP.servingSize.split(',').forEach((option, index) => {
+            const optionElement = document.createElement('option');
+            optionElement.value = index;
+            const servingSizeParts = option.trim().split(' ');
+            const multipliedServingSize = servingSizeParts.map(part => {
+                // Check if the part is a number, then multiply it by two
+                const numberValue = parseFloat(part);
+                return isNaN(numberValue) ? part : (numberValue * 2).toString();
+            });
+            optionElement.textContent = multipliedServingSize.join(' ');
+            lunchCTRP_ServingSizeSelect.appendChild(optionElement);
+        });
+
+        // Display CTRP calories based on the selected serving size for lunch, multiplying by two
+        function updateLunchCTRPCalories() {
+            const selectedOption = lunchCTRP_ServingSizeSelect.options[lunchCTRP_ServingSizeSelect.selectedIndex].textContent;
+            const calories = randomLunchCTRP.lunchCTRPCal * 2; // Multiply calories by two
+            document.getElementById('lunchCTRP_Calories').innerText = ` ${calories} Cal`;
+        }
+
+        // Initial call to set calories when the page loads for lunch
+        updateLunchCTRPCalories();
+
+        // Event listener to update calories when serving size select is changed for lunch
+        lunchCTRP_ServingSizeSelect.addEventListener('change', updateLunchCTRPCalories);
+    }
+
+    // Call the function on page load
+    generateRandomLunchCTRP();
+
+    // Attach click event to the link to regenerate lunch CTRP
+    document.getElementById('regenerateLunchCTRPLink').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent the link from navigating
+        generateRandomLunchCTRP();
+    });
+</script></div></div></div><div class="col-12" id="lunchVeggieCol"><div class="row mb-1"><div class="col-3"><img id="lunchVeggieimg" class="rounded-2" style="width: 100%; max-width: 120px; min-height: 65px; max-height: 120px; min-width: 65px;"></div><div class="col-7" style="border-bottom-style: outset;border-bottom-color: var(--bs-gray-600);"><p id="lunchVeggie" class="fw-bold" style="margin: 5px;margin-right: 0px;margin-left: 2px;color: var(--bs-body-bg);"><span id="lunchVeggieFoodItem"><strong>Text</strong></span><span id="lunchVeggieCookingmethod" class="ms-2">Text</span></p><p id="lunchVeggieCal" style="margin: 5px;margin-right: 0px;margin-left: 2px;"><select id="lunchVeggie_ServingSizeSelect" style="border-style: none;background: rgba(255,255,255,0);color: #F7CD34;"></select><span id="lunchVeggie_Calories" style="color: var(--bs-gray-500);">Text</span></p>
+
+
+
+</div><div class="col-2 d-md-flex justify-content-md-end align-items-md-start" style="text-align: center;"><a id="regenerateLunchVeggieLink" class="link-dark" href="#" data-toggle="collapse" data-target="#regenerateLunchVeggieIcon"><svg id="regenerateLunchVeggieIcon" class="icon icon-tabler icon-tabler-exchange text-light" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="width: 1.2em;height: 1.2em;">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M5 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+            <path d="M19 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+            <path d="M19 8v5a5 5 0 0 1 -5 5h-3l3 -3m0 6l-3 -3"></path>
+            <path d="M5 16v-5a5 5 0 0 1 5 -5h3l-3 -3m0 6l3 -3"></path>
+        </svg></a>
+<script>
+  // Simulated database for lunch Veggie food items
+const lunchVeggieList = [
+    { foodItem: 'Matembele', cookingMethod: 'Boiled', image: 'Matembele, sweet potatoes leaves.jpeg', servingSize: '2 cups, 128 g, 1 serving', lunchVeggieCal: 68 },
+    { foodItem: 'Chickpea leaves', cookingMethod: 'Boiled', image: 'kisamvu.jpeg', servingSize: '1 cup, 160 g, 1 serving', lunchVeggieCal: 69.8 },
+    { foodItem: 'Kisamvu', cookingMethod: 'Boiled', image: 'kisamvu.jpeg', servingSize: '1 cup, 160 g, 1 serving', lunchVeggieCal: 162.4 },
+    { foodItem: 'Mchicha', cookingMethod: 'Boiled', image: 'mchicha.jpg', servingSize: '1 cup, 132 g, 1 serving', lunchVeggieCal: 57 },
+    { foodItem: 'Green beans', cookingMethod: 'Boiled', image: 'green beans.jpeg', servingSize: '1 cup, 125 g, 1 serving', lunchVeggieCal: 54 },
+    { foodItem: 'Okra, Bamia', cookingMethod: 'Boiled', image: 'okra.jpeg', servingSize: '1 cup, 160 g, 1 serving', lunchVeggieCal: 36 },
+    { foodItem: 'Nightshade, Mnavu', cookingMethod: 'Boiled', image: 'Nighshade.jpeg', servingSize: '1 cup, 140 g, 1 serving', lunchVeggieCal: 60 },
+    { foodItem: 'Majani ya Maboga', cookingMethod: 'Boiled', image: 'majani ya maboga.jpeg', servingSize: '2 cups, 142 g, 1 serving', lunchVeggieCal: 42 },
+    { foodItem: 'Kale', cookingMethod: 'Boiled', image: 'kale.jpeg', servingSize: '1 cup, 130 g, 1 serving', lunchVeggieCal: 46 },
+    { foodItem: 'Kachumbari', cookingMethod: '(Salad)', image: 'kachumbari.jpeg', servingSize: '2 cups, 140 g, 1 serving', lunchVeggieCal: 83 }
+];
+    function generateRandomLunchVeggie() {
+        // Get a random lunch Veggie item
+        const randomLunchVeggieIndex = Math.floor(Math.random() * lunchVeggieList.length);
+        const randomLunchVeggie = lunchVeggieList[randomLunchVeggieIndex];
+
+        // Display the random Veggie item on the webpage
+        document.getElementById('lunchVeggieimg').src = randomLunchVeggie.image; // Update the image source
+        document.getElementById('lunchVeggieFoodItem').innerText = randomLunchVeggie.foodItem;
+        document.getElementById('lunchVeggieCookingmethod').innerText = randomLunchVeggie.cookingMethod;
+
+        // Populate the Veggie serving size options for lunch
+        const lunchVeggie_ServingSizeSelect = document.getElementById('lunchVeggie_ServingSizeSelect');
+        lunchVeggie_ServingSizeSelect.innerHTML = ""; // Clear previous options
+        randomLunchVeggie.servingSize.split(',').forEach((option, index) => {
+            const optionElement = document.createElement('option');
+            optionElement.value = index;
+            optionElement.textContent = option.trim();
+            lunchVeggie_ServingSizeSelect.appendChild(optionElement);
+        });
+
+        // Display Veggie calories based on the selected serving size for lunch
+        const calories = randomLunchVeggie.lunchVeggieCal;
+        document.getElementById('lunchVeggie_Calories').innerText = ` ${calories} Cal`;
+
+        // Function to update Veggie calories based on the selected serving size for lunch
+        function updateLunchVeggieCalories() {
+            const selectedOption = lunchVeggie_ServingSizeSelect.options[lunchVeggie_ServingSizeSelect.selectedIndex].textContent;
+            const calories = randomLunchVeggie.lunchVeggieCal;
+            document.getElementById('lunchVeggie_Calories').innerText = ` ${calories} Cal`;
+        }
+
+        // Initial call to set calories when the page loads for lunch
+        updateLunchVeggieCalories();
+
+        // Event listener to update calories when serving size select is changed for lunch
+        lunchVeggie_ServingSizeSelect.addEventListener('change', updateLunchVeggieCalories);
+    }
+
+    // Call the function on page load
+    generateRandomLunchVeggie();
+
+    // Attach click event to the link to regenerate lunch veggie
+    document.getElementById('regenerateLunchVeggieLink').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent the link from navigating
+        generateRandomLunchVeggie();
+    });
+</script></div></div></div><div class="col" id="lunchASFCol"><div class="row mb-2"><div class="col-3"><img id="lunchASFimg" class="rounded-2" style="width: 100%; max-width: 120px; min-height: 65px; max-height: 120px; min-width: 65px;"></div><div class="col-7"><p id="lunchASF" class="fw-bold" style="margin: 5px;margin-right: 0px;margin-left: 2px;color: var(--bs-body-bg);"><span id="lunchASFFoodItem"><strong>Text</strong></span><span id="lunchASFCookingmethod" class="ms-2">Text</span></p><p id="lunchASFCal" style="margin: 5px;margin-right: -40px;margin-left: 2px;"><select id="lunchASF_ServingSizeSelect" style="border-style: none;background: rgba(255,255,255,0);color: #F7CD34;"></select><span id="lunchASF_Calories" style="color: var(--bs-gray-500);">Text</span></p></div><div class="col-2 d-md-flex justify-content-md-end align-items-md-start" style="text-align: center;"><a id="regeneratelunchASFLink" class="link-dark" href="#"><svg id="regeneratelunchASFIcon" class="icon icon-tabler icon-tabler-exchange text-light" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="width: 1.2em;height: 1.2em;">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M5 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+        <path d="M19 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+        <path d="M19 8v5a5 5 0 0 1 -5 5h-3l3 -3m0 6l-3 -3"></path>
+        <path d="M5 16v-5a5 5 0 0 1 5 -5h3l-3 -3m0 6l3 -3"></path>
+    </svg></a>
+
+
+<script>
+  // Simulated database for lunch ASF food items
+const lunchASFList = [
+    { foodItem: 'Octopus', cookingMethod: 'fried', image: 'Octopus fried.jpeg', servingSize: '3 matchbox size, 115 g, 1 serving', breakfastASFCal: 135 },
+    { foodItem: 'Beef', cookingMethod: 'boiled', image: 'beef boiled.jpg', servingSize: '2 matchbox size, 65 g, 1 serving', breakfastASFCal: 137 },
+    { foodItem: 'Beef, nyama', cookingMethod: 'grilled', image: 'beef grilled.jpeg', servingSize: '2 matchbox size, 65 g, 1 serving', breakfastASFCal: 137 },
+    { foodItem: 'Chicken Tripe', cookingMethod: 'Roasted', image: 'utumbo wa kuku.jpeg', servingSize: '2 matchbox size, 65 g, 1 serving', breakfastASFCal: 137 },
+    { foodItem: 'Chicken', cookingMethod: 'grilled', image: 'chicken grilled.jpg', servingSize: '3 matchbox size, 95 g, 1 serving', breakfastASFCal: 135 },
+    { foodItem: 'Chicken', cookingMethod: 'baked', image: 'chicken baked.jpeg', servingSize: '3 matchbox size, 95 g, 1 serving', breakfastASFCal: 135 },
+    { foodItem: 'Fish', cookingMethod: 'stir-fried', image: 'Fish Stir Fried.jpeg', servingSize: '3 matchbox size, 95 g, 1 serving', breakfastASFCal: 135 },
+    { foodItem: 'Fish', cookingMethod: 'fried', image: 'fish fried.jpg', servingSize: '3 matchbox size, 115 g, 1 serving', breakfastASFCal: 135 },
+    { foodItem: 'Fish', cookingMethod: 'baked', image: 'baked fish.jpeg', servingSize: '3 matchbox size, 115 g, 1 serving', breakfastASFCal: 135 },
+    { foodItem: 'Fish', cookingMethod: 'boiled', image: 'Fish boiled.jpg', servingSize: '3 matchbox size, 107 g, 1 serving', breakfastASFCal: 130 },
+    { foodItem: 'Fish', cookingMethod: 'Air Fried', image: 'Fish Airfried.jpeg', servingSize: '3 matchbox size, 107 g, 1 serving', breakfastASFCal: 130 },
+
+    { foodItem: 'Sardines', cookingMethod: 'fried', image: 'sardine fried.jpeg', servingSize: '100 g, 1 serving', breakfastASFCal: 130 },
+    { foodItem: 'Sardines', cookingMethod: 'roasted', image: 'sardine cooked.jpeg', servingSize: '101 g, 1 serving', breakfastASFCal: 130 },
+    // Add more items as needed
+];
+    
+    function generateRandomLunchASF() {
+        // Get a random lunch ASF item
+        const randomLunchASFIndex = Math.floor(Math.random() * lunchASFList.length);
+        const randomLunchASF = lunchASFList[randomLunchASFIndex];
+
+        // Display the random ASF item on the webpage
+        document.getElementById('lunchASFFoodItem').innerText = randomLunchASF.foodItem;
+        document.getElementById('lunchASFCookingmethod').innerText = randomLunchASF.cookingMethod;
+
+        // Populate the ASF serving size options for lunch
+        const lunchASF_ServingSizeSelect = document.getElementById('lunchASF_ServingSizeSelect');
+        lunchASF_ServingSizeSelect.innerHTML = ""; // Clear previous options
+        randomLunchASF.servingSize.split(',').forEach((option, index) => {
+            const optionElement = document.createElement('option');
+            optionElement.value = index;
+            optionElement.textContent = option.trim();
+            lunchASF_ServingSizeSelect.appendChild(optionElement);
+        });
+
+        // Display ASF calories based on the selected serving size for lunch
+        const calories = randomLunchASF.breakfastASFCal; // Assuming breakfastASFCal is the correct property
+        document.getElementById('lunchASF_Calories').innerText = ` ${calories} Cal`;
+
+        // Update lunchASFimg
+        document.getElementById('lunchASFimg').src = randomLunchASF.image;
+    }
+
+    // Call the function on page load
+    generateRandomLunchASF();
+
+    // Attach click event to the link to regenerate lunch ASF
+    document.getElementById('regeneratelunchASFLink').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent the link from navigating
+        generateRandomLunchASF();
+    });
+
+    // Function to update ASF calories based on the selected serving size for lunch
+    function updateLunchASFCalories() {
+        const selectedOption = lunchASF_ServingSizeSelect.options[lunchASF_ServingSizeSelect.selectedIndex].textContent;
+        const calories = randomLunchASF.breakfastASFCal; // Assuming breakfastASFCal is the correct property
+        document.getElementById('lunchASF_Calories').innerText = ` ${calories} Cal`;
+    }
+
+    // Event listener to update calories when serving size select is changed for lunch
+    lunchASF_ServingSizeSelect.addEventListener('change', updateLunchASFCalories);
+</script></div></div></div></div></div><div class="col-12 col-md-6 col-lg-4 order-md-3 order-lg-3" id="Dinner"><div id="dinnnerheading"><div class="row mt-1"><div class="col-7 col-lg-6" id="dinnerandDinnerCal"><p class="fw-bold" style="margin-top: 0px;margin-bottom: 0px;color: var(--bs-body-bg);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" class="me-2 mb-2" style="width: 1.2em;height: 1.2em;">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.5468 3.67162C20.1563 3.28109 19.5231 3.28109 19.1326 3.67162L13.7687 9.03555H2V11.0356H2.00842C2.22563 16.3663 6.61591 20.6213 12 20.6213C17.3841 20.6213 21.7744 16.3663 21.9916 11.0356H22V9.03555H16.5971L20.5468 5.08583C20.9374 4.69531 20.9374 4.06214 20.5468 3.67162ZM14.1762 11.0356C14.1806 11.0356 14.1851 11.0356 14.1896 11.0356H19.9895C19.7739 15.2613 16.2793 18.6213 12 18.6213C7.72066 18.6213 4.22609 15.2613 4.01054 11.0356H14.1762Z" fill="currentColor"></path>
+</svg><strong>Dinner</strong></p><p style="margin-top: 0px;margin-bottom: 0px;"><span id="dinnerCal" style="color: var(--bs-gray-400);">405 Cal</span></p></div><div class="col-3 d-flex justify-content-end align-items-start" id="saveDinner" style="text-align: center;"></div><div class="col-2 text-center" id="regenerateDinnerCol"><a id="bookmarkDinnerLink" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bookmarks-fill" id="bookmarkDinnerIcon" style="width: 1.5em;height: 1.5em;color: var(--bs-body-bg);margin-top: 8px;">
+  <path d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5z"></path>
+  <path d="M4.268 1A2 2 0 0 1 6 0h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L13 13.768V2a1 1 0 0 0-1-1z"></path>
+</svg></a></div></div></div><div class="row card me-1 shadow-lg" id="dinnerCard" style="background-color: var(--bs-secondary-text-emphasis); margin-right: 3px;margin-left: -4px;"><div class="col-12" id="dinnerCTRPCol"><div class="row mt-2 mb-1" id="dinnerCTRPRow"><div class="col-3" id="dinnerCTRPimgCol"><img id="dinnerCTRPimg" class="rounded-2" style="width: 100%; max-width: 120px; min-height: 65px; max-height: 120px; min-width: 65px;"></div><div class="col-7" id="dinnerCTRPCol" style="border-bottom-style: outset;border-bottom-color: var(--bs-gray-600);"><p id="dinnerCTRP" class="fw-bold" style="margin: 5px;margin-right: 0px;margin-left: 2px;color: var(--bs-body-bg);"><span id="dinnerCTRPFoodItem"><strong>Text</strong></span><span id="dinnerCTRPCookingmethod" class="ms-2">Text</span></p><p id="dinnerCTRPCal" style="margin: 5px;margin-right: 0px;margin-left: 2px;"><select id="dinnerCTRP_ServingSizeSelect" style="border-style: none;background: none;color: #F7CD34;"></select><span id="dinnerCTRP_Calories" style="color: var(--bs-gray-500);">Text</span></p></div><div class="col-2 d-md-flex justify-content-md-end align-items-md-center" id="regeneratedinnerCTRPCol" style="text-align: center;"><a id="regeneratedinnerCTRPLink" class="link-dark" href="#">
+    <svg id="regeneratedinnerCTRPIcon" class="icon icon-tabler icon-tabler-exchange text-light" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="width: 1.2em;height: 1.2em;">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M5 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+        <path d="M19 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+        <path d="M19 8v5a5 5 0 0 1 -5 5h-3l3 -3m0 6l-3 -3"></path>
+        <path d="M5 16v-5a5 5 0 0 1 5 -5h3l-3 -3m0 6l3 -3"></path>
+    </svg>
+</a>
+
+<script>
+    // Simulated database for Dinner CTRP food items
+
+        const dinnerCTRPList = [
+    { foodItem: 'Maize, Dona', cookingMethod: 'Ugali', image: 'Ugali.jpeg', servingSize: '0.75 cup, 161 g, 1 serving', dinnerCTRPCal: 210 },
+    { foodItem: 'Maize, sembe', cookingMethod: 'Ugali', image: 'Ugali.jpeg', servingSize: '0.75 cup, 161 g, 1 serving', dinnerCTRPCal: 210 },
+    { foodItem: 'Sorghum', cookingMethod: 'Ugali', image: 'Sorghum Ugali.jpeg', servingSize: '0.75 cup, 161 g, 1 serving', dinnerCTRPCal: 210 },
+    { foodItem: 'Maize and Sorghum', cookingMethod: 'Ugali', image: 'Sorghum and maize Ugali.jpeg', servingSize: '0.75 cup, 161 g, 1 serving', dinnerCTRPCal: 210 },
+    { foodItem: 'Maize and Cassava', cookingMethod: 'Ugali', image: 'maize and cassava ugali.jpeg', servingSize: '0.75 cup, 161 g, 1 serving', dinnerCTRPCal: 210 },
+    { foodItem: 'Rice', cookingMethod: 'Biryani', image: 'Rice biryani.jpeg', servingSize: '1 cup, 160 g, 1 serving', dinnerCTRPCal: 205 },
+    { foodItem: 'Rice', cookingMethod: 'Cooked', image: 'rice cooked.jpeg', servingSize: '1 cup, 160 g, 1 serving', dinnerCTRPCal: 205 },
+    { foodItem: 'Spaghetti', cookingMethod: 'Boiled', image: 'spaghetti.jpg', servingSize: '1 cup, 160 g, 1 serving', dinnerCTRPCal: 205 },
+    { foodItem: 'Rice', cookingMethod: 'Fried', image: 'Fried Rice.jpeg', servingSize: '1 cup, 160 g, 1 serving', dinnerCTRPCal: 205 },
+    { foodItem: 'Rice', cookingMethod: 'Pilau', image: 'Rice pilau.jpeg', servingSize: '1 cup, 160 g, 1 serving', dinnerCTRPCal: 205 },
+    // Add other lunch items
+];
+
+    // Function to generate random dinner CTRP item
+    function generateRandomDinnerCTRP() {
+        const randomDinnerCTRPIndex = Math.floor(Math.random() * dinnerCTRPList.length);
+        const randomDinnerCTRP = dinnerCTRPList[randomDinnerCTRPIndex];
+
+        // Display the random CTRP item on the webpage
+        document.getElementById('dinnerCTRPimg').src = randomDinnerCTRP.image; // Update the image source
+        document.getElementById('dinnerCTRPFoodItem').innerText = randomDinnerCTRP.foodItem;
+        document.getElementById('dinnerCTRPCookingmethod').innerText = randomDinnerCTRP.cookingMethod;
+
+        // Populate the CTRP serving size options for dinner
+        const dinnerCTRP_ServingSizeSelect = document.getElementById('dinnerCTRP_ServingSizeSelect');
+        dinnerCTRP_ServingSizeSelect.innerHTML = ""; // Clear previous options
+        randomDinnerCTRP.servingSize.split(',').forEach((option, index) => {
+            const optionElement = document.createElement('option');
+            optionElement.value = index;
+            optionElement.textContent = option.trim();
+            dinnerCTRP_ServingSizeSelect.appendChild(optionElement);
+        });
+
+        // Display CTRP calories based on the selected serving size for dinner
+        const calories = randomDinnerCTRP.dinnerCTRPCal;
+        document.getElementById('dinnerCTRP_Calories').innerText = ` ${calories} Cal`;
+    }
+
+    // Function to update CTRP calories based on the selected serving size for dinner
+    function updateDinnerCTRPCalories() {
+        const selectedOption = dinnerCTRP_ServingSizeSelect.options[dinnerCTRP_ServingSizeSelect.selectedIndex].textContent;
+        const calories = randomDinnerCTRP.dinnerCTRPCal;
+        document.getElementById('dinnerCTRP_Calories').innerText = ` ${calories} Cal`;
+    }
+
+    // Event listener to update calories when serving size select is changed for dinner
+    document.getElementById('dinnerCTRP_ServingSizeSelect').addEventListener('change', updateDinnerCTRPCalories);
+
+    // Call the function on page load
+    generateRandomDinnerCTRP();
+
+    // Attach click event to the link to regenerate dinner CTRP
+    document.getElementById('regeneratedinnerCTRPLink').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent the link from navigating
+        generateRandomDinnerCTRP();
+    });
+</script></div></div></div><div class="col-12" id="dinnerPNSCol"><div class="row mb-1"><div class="col-3"><img id="dinnerPNSimg" class="rounded-2" style="width: 100%; max-width: 120px; min-height: 65px; max-height: 120px; min-width: 65px;"></div><div class="col-7" style="border-bottom-style: outset;border-bottom-color: var(--bs-gray-600);"><p id="dinnerPNS" class="fw-bold" style="margin: 5px;margin-right: 0px;margin-left: 2px;color: var(--bs-body-bg);"><span id="dinnerPNSFoodItem"><strong>Text</strong></span><span id="dinnerPNSCookingmethod" class="ms-2">Text</span></p><p id="dinnerPNSCal" style="margin: 5px;margin-right: 0px;margin-left: 2px;"><select id="dinnerPNS_ServingSizeSelect" style="border-style: none;background: rgba(255,255,255,0);color: #F7CD34;"></select><span id="dinnerPNS_Calories" style="color: var(--bs-gray-500);">Text</span></p></div><div class="col-2 d-md-flex justify-content-md-end align-items-md-start" style="text-align: center;"><a id="regeneratedinnerPNSLink" class="link-dark" href="#">
+    <svg id="regeneratedinnerPNSIcon" class="icon icon-tabler icon-tabler-exchange text-light" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="width: 1.2em;height: 1.2em;">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M5 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+        <path d="M19 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+        <path d="M19 8v5a5 5 0 0 1 -5 5h-3l3 -3m0 6l-3 -3"></path>
+        <path d="M5 16v-5a5 5 0 0 1 5 -5h3l-3 -3m0 6l3 -3"></path>
+    </svg>
+</a>
+
+<script>
+    // Simulated database for dinner PNS food items
+  const dinnerPNSList = [
+      { foodItem: 'Beans', cookingMethod: 'Boiled', image: 'beans.jpeg', servingSize: '0.5 cup, 90 g, 1 serving', dinnerPNSCal: 111 },
+      { foodItem: 'Bambara', cookingMethod: 'Boiled', image: 'bambara.jpeg', servingSize: '0.5 cup, 90 g, 1 serving', dinnerPNSCal: 125 },
+      { foodItem: 'Soya Beans', cookingMethod: 'Boiled', image: 'soya beans.jpg', servingSize: '0.5 cup, 85 g, 1 serving', dinnerPNSCal: 151 },
+      { foodItem: 'Cowpeas', cookingMethod: 'Boiled', image: 'Cowpeas.jpeg', servingSize: '0.5 cup, 80 g, 1 serving', dinnerPNSCal: 94 },
+      { foodItem: 'Mung Beans', cookingMethod: 'Boiled', image: 'mung beans.jpeg', servingSize: '0.5 cup, 90 g, 1 serving', dinnerPNSCal: 111 },
+      { foodItem: 'Kidney ', cookingMethod: 'Beans', image: 'kidney beans.jpeg', servingSize: '0.5 cup, 90 g, 1 serving', dinnerPNSCal: 111 },
+      { foodItem: 'Pigeon Peas', cookingMethod: 'Boiled', image: 'Pigeon Peas.jpeg', servingSize: '0.5 cup, 90 g, 1 serving', dinnerPNSCal: 111 },
+      { foodItem: 'Peas', cookingMethod: 'Roasted', image: 'peas cooked.jpeg', servingSize: '0.5 cup, 80 g, 1 serving', dinnerPNSCal: 94 }
+  ];
+
+  // Function to generate random dinner PNS item
+  function generateRandomDinnerPNS() {
+    const randomDinnerPNSIndex = Math.floor(Math.random() * dinnerPNSList.length);
+    const randomDinnerPNS = dinnerPNSList[randomDinnerPNSIndex];
+
+    // Display the random PNS item on the webpage
+    document.getElementById('dinnerPNSFoodItem').innerText = randomDinnerPNS.foodItem;
+    document.getElementById('dinnerPNSCookingmethod').innerText = randomDinnerPNS.cookingMethod;
+
+    // Update the image source
+    document.getElementById('dinnerPNSimg').src = randomDinnerPNS.image;
+
+    // Populate the PNS serving size options for dinner, multiplying each value by two
+    const dinnerPNS_ServingSizeSelect = document.getElementById('dinnerPNS_ServingSizeSelect');
+    dinnerPNS_ServingSizeSelect.innerHTML = ""; // Clear previous options
+    randomDinnerPNS.servingSize.split(',').forEach((option, index) => {
+      const optionElement = document.createElement('option');
+      optionElement.value = index;
+      const servingSizeParts = option.trim().split(' ');
+      const multipliedServingSize = servingSizeParts.map(part => {
+        // Check if the part is a number, then multiply it by two
+        const numberValue = parseFloat(part);
+        return isNaN(numberValue) ? part : (numberValue * 2).toString();
+      });
+      optionElement.textContent = multipliedServingSize.join(' ');
+      dinnerPNS_ServingSizeSelect.appendChild(optionElement);
+    });
+
+    // Display PNS calories based on the selected serving size for dinner, multiplying by two
+    const calories = randomDinnerPNS.dinnerPNSCal * 2; // Multiply calories by two
+    document.getElementById('dinnerPNS_Calories').innerText = ` ${calories} Cal`;
+  }
+
+  // Call the function on page load
+  generateRandomDinnerPNS();
+
+  // Attach click event to the link to regenerate dinner PNS
+  document.getElementById('regeneratedinnerPNSLink').addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent the link from navigating
+    generateRandomDinnerPNS();
+  });
+
+  // Function to update PNS calories based on the selected serving size for dinner, multiplying by two
+  function updateDinnerPNSCalories() {
+    const selectedOption = dinnerPNS_ServingSizeSelect.options[dinnerPNS_ServingSizeSelect.selectedIndex].textContent;
+    const calories = randomDinnerPNS.dinnerPNSCal * 2; // Multiply calories by two
+    document.getElementById('dinnerPNS_Calories').innerText = ` ${calories} Cal`;
+  }
+
+  // Event listener to update calories when serving size select is changed for dinner
+  document.getElementById('dinnerPNS_ServingSizeSelect').addEventListener('change', updateDinnerPNSCalories);
+</script></div></div></div><div class="col" id="dinnerVeggieCol"><div class="row"><div class="col-3 mb-2"><img id="dinnerVeggieimg" class="rounded-2" style="width: 100%; max-width: 120px; min-height: 65px; max-height: 120px; min-width: 65px;"></div><div class="col-7"><p id="dinnerVeggie" class="fw-bold" style="margin: 5px;margin-right: 0px;margin-left: 2px;color: var(--bs-body-bg);"><span id="dinnerVeggieFoodItem"><strong>Text</strong></span><span id="dinnerVeggieCookingmethod" class="ms-2">Text</span></p><p id="dinnerVeggieCal" style="margin: 5px;margin-right: 0px;margin-left: 2px;"><select id="dinnerVeggie_ServingSizeSelect" style="border-style: none;background: rgba(255,255,255,0);color: #F7CD34;"></select><span id="dinnerVeggie_Calories" style="color: var(--bs-gray-500);">Text</span></p></div><div class="col-2 d-md-flex justify-content-md-end align-items-md-start" style="text-align: center;"><a id="regeneratedinnerVeggieLink" class="link-dark" href="#">
+    <svg id="regeneratedinnerVeggieIcon" class="icon icon-tabler icon-tabler-exchange text-light" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="width: 1.2em;height: 1.2em;">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M5 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+        <path d="M19 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+        <path d="M19 8v5a5 5 0 0 1 -5 5h-3l3 -3m0 6l-3 -3"></path>
+        <path d="M5 16v-5a5 5 0 0 1 5 -5h3l-3 -3m0 6l3 -3"></path>
+    </svg>
+</a>
+
+<script>
+  // Simulated database for dinner Veggie items
+  const dinnerVeggieList = [
+    { foodItem: 'Matembele', cookingMethod: 'Boiled', image: 'Matembele, sweet potatoes leaves.jpeg', servingSize: '2 cups, 128 g, 1 serving', dinnerVeggieCal: 68 },
+    { foodItem: 'Chickpea leaves', cookingMethod: 'Boiled', image: 'kisamvu.jpeg', servingSize: '1 cup, 160 g, 1 serving', dinnerVeggieCal: 69.8 },
+    { foodItem: 'Kisamvu', cookingMethod: 'Boiled', image: 'kisamvu.jpeg', servingSize: '1 cup, 160 g, 1 serving', dinnerVeggieCal: 162.4 },
+    { foodItem: 'Mchicha', cookingMethod: 'Boiled', image: 'mchicha.jpg', servingSize: '1 cup, 132 g, 1 serving', dinnerVeggieCal: 57 },
+    { foodItem: 'Green beans', cookingMethod: 'Boiled', image: 'green beans.jpeg', servingSize: '1 cup, 125 g, 1 serving', dinnerVeggieCal: 54 },
+    { foodItem: 'Okra, Bamia', cookingMethod: 'Boiled', image: 'okra.jpeg', servingSize: '1 cup, 160 g, 1 serving', dinnerVeggieCal: 36 },
+    { foodItem: 'Nightshade, Mnavu', cookingMethod: 'Boiled', image: 'Nighshade.jpeg', servingSize: '1 cup, 140 g, 1 serving', dinnerVeggieCal: 60 },
+    { foodItem: 'Majani ya Maboga', cookingMethod: 'Boiled', image: 'majani ya maboga.jpeg', servingSize: '2 cups, 142 g, 1 serving', dinnerVeggieCal: 42 },
+    { foodItem: 'kale', cookingMethod: 'Boiled', image: 'kale.jpeg', servingSize: '1 cup, 130 g, 1 serving', dinnerVeggieCal: 46 },
+    { foodItem: 'Kachumbari', cookingMethod: '(Salad)', image: 'kachumbari.jpeg', servingSize: '2 cups, 140 g, 1 serving', dinnerVeggieCal: 83 }
+  ];
+
+    // Function to generate random dinner Veggie item
+    // Function to generate random dinner Veggie item
+    function generateRandomDinnerVeggie() {
+        const randomDinnerVeggieIndex = Math.floor(Math.random() * dinnerVeggieList.length);
+        const randomDinnerVeggie = dinnerVeggieList[randomDinnerVeggieIndex];
+
+        // Display the random Veggie item on the webpage
+        document.getElementById('dinnerVeggieimg').src = randomDinnerVeggie.image; // Update the image source
+        document.getElementById('dinnerVeggieFoodItem').innerText = randomDinnerVeggie.foodItem;
+        document.getElementById('dinnerVeggieCookingmethod').innerText = randomDinnerVeggie.cookingMethod;
+
+        // Populate the Veggie serving size options for dinner
+        const dinnerVeggie_ServingSizeSelect = document.getElementById('dinnerVeggie_ServingSizeSelect');
+        dinnerVeggie_ServingSizeSelect.innerHTML = ""; // Clear previous options
+        randomDinnerVeggie.servingSize.split(',').forEach((option, index) => {
+            const optionElement = document.createElement('option');
+            optionElement.value = index;
+            optionElement.textContent = option.trim();
+            dinnerVeggie_ServingSizeSelect.appendChild(optionElement);
+        });
+
+        // Display Veggie calories based on the selected serving size for dinner
+        const calories = randomDinnerVeggie.dinnerVeggieCal;
+        document.getElementById('dinnerVeggie_Calories').innerText = ` ${calories} Cal`;
+    }
+
+    // Call the function on page load
+    generateRandomDinnerVeggie();
+
+    // Attach click event to the link to regenerate dinner Veggie
+    document.getElementById('regeneratedinnerVeggieLink').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent the link from navigating
+        generateRandomDinnerVeggie();
+    });
+
+    // Function to update Veggie calories based on the selected serving size for dinner
+    function updateDinnerVeggieCalories() {
+        const selectedOption = dinnerVeggie_ServingSizeSelect.options[dinnerVeggie_ServingSizeSelect.selectedIndex].textContent;
+        const calories = randomDinnerVeggie.dinnerVeggieCal;
+        document.getElementById('dinnerVeggie_Calories').innerText = ` ${calories} Cal`;
+    }
+
+    // Event listener to update calories when serving size select is changed for dinner
+    document.getElementById('dinnerVeggie_ServingSizeSelect').addEventListener('change', updateDinnerVeggieCalories);
+</script>
+</div></div></div></div></div><div class="col-12 col-md-6 col-lg-4 order-md-4 order-lg-4 mb-5" id="Snack"><div id="snacksheading"><div class="row mt-1"><div class="col-7 col-lg-6" id="snackandSnackCal"><p class="fw-bold" style="margin-top: 0px;margin-bottom: 0px;color: var(--bs-body-bg);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-cookie me-2 mb-2" style="width: 1.2em;height: 1.2em;">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M8 13v.01"></path>
+  <path d="M12 17v.01"></path>
+  <path d="M12 12v.01"></path>
+  <path d="M16 14v.01"></path>
+  <path d="M11 8v.01"></path>
+  <path d="M13.148 3.476l2.667 1.104a4 4 0 0 0 4.656 6.14l.053 .132a3 3 0 0 1 0 2.296c-.497 .786 -.838 1.404 -1.024 1.852c-.189 .456 -.409 1.194 -.66 2.216a3 3 0 0 1 -1.624 1.623c-1.048 .263 -1.787 .483 -2.216 .661c-.475 .197 -1.092 .538 -1.852 1.024a3 3 0 0 1 -2.296 0c-.802 -.503 -1.419 -.844 -1.852 -1.024c-.471 -.195 -1.21 -.415 -2.216 -.66a3 3 0 0 1 -1.623 -1.624c-.265 -1.052 -.485 -1.79 -.661 -2.216c-.198 -.479 -.54 -1.096 -1.024 -1.852a3 3 0 0 1 0 -2.296c.48 -.744 .82 -1.361 1.024 -1.852c.171 -.413 .391 -1.152 .66 -2.216a3 3 0 0 1 1.624 -1.623c1.032 -.256 1.77 -.476 2.216 -.661c.458 -.19 1.075 -.531 1.852 -1.024a3 3 0 0 1 2.296 0z"></path>
+</svg><strong>Snacks</strong></p><p style="margin-top: 0px;margin-bottom: 0px;"><span id="snackCal" style="color: var(--bs-gray-400);">405 Cal</span></p></div><div class="col-3 d-flex justify-content-end align-items-start" id="savesnack" style="text-align: center;"></div><div class="col-2 text-center" id="regeneratesSnackCol"><a id="bookmarkSnackLink" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bookmarks-fill" id="bookmarkSnackIcon" style="width: 1.5em;height: 1.5em;color: var(--bs-body-bg);margin-top: 8px;">
+  <path d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5z"></path>
+  <path d="M4.268 1A2 2 0 0 1 6 0h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L13 13.768V2a1 1 0 0 0-1-1z"></path>
+</svg></a></div></div></div><div class="row card me-1 shadow-lg" id="snackcard" style="background-color: var(--bs-secondary-text-emphasis); margin-right: 3px;margin-left: -4px;"><div class="col-12" id="SnackPNSCol"><div class="row mt-2 mb-1" id="snackPNSRow"><div class="col-3" id="snackPNSimgCol"><img id="snackPNSimg" class="rounded-2" style="width: 100%; max-width: 120px; min-height: 65px; max-height: 120px; min-width: 65px;"></div><div class="col-7" id="snackPNSCol" style="border-bottom-style: outset;border-bottom-color: var(--bs-gray-600);"><p id="snackPNS" class="fw-bold" style="margin: 5px;margin-left: 2px;margin-right: 0px;color: var(--bs-body-bg);"><span id="snackPNSFoodItem"><strong>Text</strong></span><span id="snackPNSCookingmethod" class="ms-2">Text</span></p><p id="snackPNSCal" style="margin: 5px;margin-right: 0px;margin-left: 2px;"><select id="snackPNS_ServingSizeSelect" style="border-style: none;background: rgba(255,255,255,0);color: #F7CD34;"></select><span id="snackPNS_Calories" style="color: var(--bs-gray-500);">Text</span></p>
+
+
+
+</div><div class="col-2 d-md-flex justify-content-md-end align-items-md-center" id="regeneratesnackPNSCol" style="text-align: center;"><a id="regeneratesnackPNSLink" class="link-dark" href="#">
+  <svg id="regeneratesnackPNSIcon" class="icon icon-tabler icon-tabler-exchange text-light" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="width: 1.2em; height: 1.2em;">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M5 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+    <path d="M19 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+    <path d="M19 8v5a5 5 0 0 1 -5 5h-3l3 -3m0 6l-3 -3"></path>
+    <path d="M5 16v-5a5 5 0 0 1 5 -5h3l-3 -3m0 6l3 -3"></path>
+  </svg>
+</a>
+
+<script>
+  // Simulated database for snack PNS food items
+  const snackPNSList = [
+    { foodItem: 'Almonds', cookingMethod: 'Without skin', image: 'Almonds.jpeg', servingSize: '3 tbsp, 27 g, 1 serving', snackPNSCal: 165 },
+    { foodItem: 'Sunflower seed', cookingMethod: 'unsalted', image: 'Sunflower seed.jpeg', servingSize: '3 tbsp, 27 g, 1 serving', snackPNSCal: 160 },
+    { foodItem: 'Cashew', cookingMethod: 'Caramelized', image: 'Cashew Caramelized.jpeg', servingSize: '3 tbsp, 27 g, 1 serving', snackPNSCal: 120 },
+    { foodItem: 'Pumpkin seed', cookingMethod: 'dried', image: 'Pumpkin seed.jpeg', servingSize: '3 tbsp, 30 g, 1 serving', snackPNSCal: 155 },
+    { foodItem: 'Peanuts', cookingMethod: 'dry roasted', image: 'Peanuts.jpeg', servingSize: '3 tbsp, 27 g, 1 serving', snackPNSCal: 159 },
+    { foodItem: 'Cashew,', cookingMethod: 'Raw, unsalted', image: 'Cashew raw unsalted.jpeg', servingSize: '3 tbsp, 27 g, 1 serving', snackPNSCal: 160 },
+    { foodItem: 'Sesame seed', cookingMethod: 'unsalted', image: 'Sesame seed.jpeg', servingSize: '1.5 tbsp, 25 g, 1 serving', snackPNSCal: 162.5 }
+  ];
+
+  // Function to generate random snack PNS item
+  function generateRandomSnackPNS() {
+    const randomSnackPNSIndex = Math.floor(Math.random() * snackPNSList.length);
+    const randomSnackPNS = snackPNSList[randomSnackPNSIndex];
+
+    // Display the random PNS item on the webpage
+    document.getElementById('snackPNSFoodItem').innerText = randomSnackPNS.foodItem;
+    document.getElementById('snackPNSCookingmethod').innerText = randomSnackPNS.cookingMethod;
+
+    // Update the image source
+    document.getElementById('snackPNSimg').src = randomSnackPNS.image;
+
+    // Populate the PNS serving size options for snack
+    const snackPNS_ServingSizeSelect = document.getElementById('snackPNS_ServingSizeSelect');
+    snackPNS_ServingSizeSelect.innerHTML = ""; // Clear previous options
+    randomSnackPNS.servingSize.split(',').forEach((option, index) => {
+      const optionElement = document.createElement('option');
+      optionElement.value = index;
+      optionElement.textContent = option.trim();
+      snackPNS_ServingSizeSelect.appendChild(optionElement);
+    });
+
+    // Display PNS calories based on the selected serving size for snack
+    const calories = randomSnackPNS.snackPNSCal;
+    document.getElementById('snackPNS_Calories').innerText = ` ${calories} Cal`;
+  }
+
+  // Call the function on page load
+  generateRandomSnackPNS();
+
+  // Attach click event to the link to regenerate snack PNS
+  document.getElementById('regeneratesnackPNSLink').addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent the link from navigating
+    generateRandomSnackPNS();
+  });
+
+  // Function to update PNS calories based on the selected serving size for snack
+  function updateSnackPNSCalories() {
+    const selectedOption = snackPNS_ServingSizeSelect.options[snackPNS_ServingSizeSelect.selectedIndex].textContent;
+    const calories = randomSnackPNS.snackPNSCal;
+    document.getElementById('snackPNS_Calories').innerText = ` ${calories} Cal`;
+  }
+
+  // Event listener to update calories when serving size select is changed for snack
+  document.getElementById('snackPNS_ServingSizeSelect').addEventListener('change', updateSnackPNSCalories);
+</script></div></div></div><div class="col-12" id="breakfastASFCol-3"><div class="row mb-2"><div class="col-3"><img id="snackFruitImg" class="rounded-2" style="width: 100%; max-width: 120px; min-height: 65px; max-height: 120px; min-width: 65px;"></div><div class="col-7"><p id="snackFruit" class="fw-bold" style="margin: 5px;margin-right: 0px;margin-left: 2px;color: var(--bs-body-bg);"><span id="snackFruitFoodItem"><strong>Text</strong></span><span id="snackFruitCookingmethod" class="ms-2">Text</span></p><p id="snackFruitCal" style="margin: 5px;margin-right: 0px;margin-left: 2px;"><select id="snackFruit_ServingSizeSelect" style="border-style: none;background: rgba(255,255,255,0);color: #F7CD34;"></select><span id="snackFruit_Calories" style="color: var(--bs-gray-500);">Text</span></p></div><div class="col-2 d-md-flex justify-content-md-end align-items-md-start" style="text-align: center;">      <a id="regeneratesnackFruitLink" class="link-dark" href="#">
+    <svg id="regeneratesnackFruitIcon" class="icon icon-tabler icon-tabler-exchange text-light" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="width: 1.2em;height: 1.2em;">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M5 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+        <path d="M19 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+        <path d="M19 8v5a5 5 0 0 1 -5 5h-3l3 -3m0 6l-3 -3"></path>
+        <path d="M5 16v-5a5 5 0 0 1 5 -5h3l-3 -3m0 6l3 -3"></path>
+    </svg>
+</a>
+  <script>
+    function initializeSnackFruit() {
+      // Simulated database for snack Fruit food items
+    const snackFruitList = [
+        { foodItem: 'Apples', cookingMethod: '(7 cm ⌀)', image: 'Apple.jpeg', servingSize: '1 medium, 140 g, 1 serving', snackFruitCal: 75 },
+        { foodItem: 'Avocado', cookingMethod: 'Ripe', image: 'Avocado cut.jpeg', servingSize: '1/2 small, 140 g, 1 serving', snackFruitCal: 80 },
+        { foodItem: 'Ripe Banana', cookingMethod: '(17–19 cm)', image: 'Ripe Banana.jpeg', servingSize: '1 medium, 120 g, 1 serving', snackFruitCal: 120 },
+        { foodItem: 'Date', cookingMethod: 'Dried', image:  "https://spoonacular.com/cdn/ingredients_100x100/dates.jpg", servingSize: '53 g, 1 serving', snackFruitCal: 80 },
+        { foodItem: 'Grape', cookingMethod: '(Red)', image: 'Red grape.jpeg', servingSize: '1 cup, 90 g, 1 serving', snackFruitCal: 60.3 },
+        { foodItem: 'Guavas (Pera)', cookingMethod: 'Raw', image: 'https://spoonacular.com/cdn/ingredients_100x100/guava.jpg', servingSize: '2 medium, 110 g, 1 serving', snackFruitCal: 65 },
+        { foodItem: 'Mango', cookingMethod: 'Ripe, diced', image: 'Mango Ripe.jpeg', servingSize: '1 cup cut, 165 g, 1 serving', snackFruitCal: 106.2 },
+        { foodItem: 'Orange', cookingMethod: '(7.5-8 cm)', image: 'Orange.jpeg', servingSize: '1 large, 185 g, 1 serving', snackFruitCal: 80 },
+        { foodItem: 'Papaya', cookingMethod: 'Ripe', image: 'Papaya.jpg', servingSize: '1 cup cut, 145 g, 1 serving', snackFruitCal: 51 },
+        { foodItem: 'Pears', cookingMethod: 'Raw', image: 'Pears.jpeg', servingSize: '1 small, 150 g, 1 serving', snackFruitCal: 85 },
+        { foodItem: 'Pineapple', cookingMethod: 'Raw', image: 'pineapple.jpeg', servingSize: '1 wedge, 140 g, 1 serving', snackFruitCal: 80 },
+        { foodItem: 'Tamarind', cookingMethod: 'Ubuyu', image: 'ubuyu.jpeg', servingSize: '0.25 cup, 30 g, 1 serving', snackFruitCal: 75 },
+        { foodItem: 'Tangerines (Chenza)', cookingMethod: '(5-6 cm ⌀)', image: 'chenza.jpeg', servingSize: '2 small, 150 g, 1 serving', snackFruitCal: 84 },
+        { foodItem: 'Watermelon', cookingMethod: 'Raw', image: 'watermelon.jpeg', servingSize: '1.5 cup cut, 230 g, 1 serving', snackFruitCal: 67 },
+        { foodItem: 'Jackfruit', cookingMethod: '(Fenesi)', image: 'Jackfruit.jpeg', servingSize: '1 cup, 154 g, 1 serving', snackFruitCal: 60 },
+        { foodItem: 'Soursop ', cookingMethod: '(Stafeli)', image: 'soursop.jpeg', servingSize: '1 cup, 155 g, 1 serving', snackFruitCal: 60 },
+        { foodItem: 'Annona', cookingMethod: '(Topetope)', image: 'annona.jpeg', servingSize: '1 cup, 154 g, 1 serving', snackFruitCal: 60 },
+        { foodItem: 'Local Plums (Tunda Damu)', cookingMethod: 'Raw', image: 'local plums.jpeg', servingSize: '1 cup, 154 g, 1 serving', snackFruitCal: 60 },
+    ];
+
+      function generateRandomSnackFruit() {
+        // Get a random snack Fruit item
+        const randomSnackFruitIndex = Math.floor(Math.random() * snackFruitList.length);
+        const randomSnackFruit = snackFruitList[randomSnackFruitIndex];
+
+        // Display the random snack Fruit item on the webpage
+        document.getElementById('snackFruitFoodItem').innerText = randomSnackFruit.foodItem;
+        document.getElementById('snackFruitCookingmethod').innerText = randomSnackFruit.cookingMethod;
+
+        // Update the image source
+        document.getElementById('snackFruitImg').src = randomSnackFruit.image;
+
+        // Populate the snack Fruit serving size options
+        const snackFruit_ServingSizeSelect = document.getElementById('snackFruit_ServingSizeSelect');
+        snackFruit_ServingSizeSelect.innerHTML = ""; // Clear previous options
+        randomSnackFruit.servingSize.split(',').forEach((option, index) => {
+          const optionElement = document.createElement('option');
+          optionElement.value = index;
+          optionElement.textContent = option.trim();
+          snackFruit_ServingSizeSelect.appendChild(optionElement);
+        });
+
+        // Display snack Fruit calories based on the selected serving size
+        snackFruit_ServingSizeSelect.addEventListener('change', () => {
+          const selectedOption = snackFruit_ServingSizeSelect.options[snackFruit_ServingSizeSelect.selectedIndex].textContent;
+          const calories = randomSnackFruit.snackFruitCal;
+          document.getElementById('snackFruit_Calories').innerText = ` ${calories} Cal`;
+        });
+
+        // Function to update snack Fruit calories based on the selected serving size
+        function updateSnackFruitCalories() {
+          const selectedOption = snackFruit_ServingSizeSelect.options[snackFruit_ServingSizeSelect.selectedIndex].textContent;
+          const calories = randomSnackFruit.snackFruitCal;
+          document.getElementById('snackFruit_Calories').innerText = ` ${calories} Cal`;
+        }
+
+        // Initial call to set calories when the page loads
+        updateSnackFruitCalories();
+
+        // Event listener to update calories when serving size select is changed
+        snackFruit_ServingSizeSelect.addEventListener('change', updateSnackFruitCalories);
+      }
+
+      // Call the function on page load
+      generateRandomSnackFruit();
+
+      // Attach click event to the link to regenerate snack Fruit
+      document.getElementById('regeneratesnackFruitLink').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent the link from navigating
+        generateRandomSnackFruit();
+      });
+    }
+
+    // Initialize snack Fruit
+    initializeSnackFruit();
+  </script></div></div><div class="row"><div class="col-3 mb-2"><img id="breakfastASFimg-4" class="rounded-2" style="width: 100%; max-width: 120px; min-height: 65px; max-height: 120px; min-width: 65px;" src="/assets/img/Cooking%20oil.png?h=919e377bd917e2fccdce81c0562dfb4e"></div><div class="col-9" style="border-top-style: outset;border-top-color: var(--bs-gray-800);"><p id="discretionaryCal" style="font-size: 14px; color: whitesmoke"><span style="margin-left: 6px;font-size: 14px;"><em>come from  discretionary calories, fats, and oils added to meals during cooking.</em></span></p>
+
+<script>
+    // Function to update discretionary calories
+function updateDiscretionaryCalories() {
+    const snackPNSCalories = Math.floor(parseFloat(document.getElementById('snackPNS_Calories').innerText)) || 0;
+    const snackFruitCalories = Math.floor(parseFloat(document.getElementById('snackFruit_Calories').innerText)) || 0;
+    const dinnerCTRPCalories = Math.floor(parseFloat(document.getElementById('dinnerCTRP_Calories').innerText)) || 0;
+    const dinnerPNSCalories = Math.floor(parseFloat(document.getElementById('dinnerPNS_Calories').innerText)) || 0;
+    const dinnerVeggieCalories = Math.floor(parseFloat(document.getElementById('dinnerVeggie_Calories').innerText)) || 0;
+    const lunchCTRPCalories = Math.floor(parseFloat(document.getElementById('lunchCTRP_Calories').innerText)) || 0;
+    const lunchVeggieCalories = Math.floor(parseFloat(document.getElementById('lunchVeggie_Calories').innerText)) || 0;
+    const lunchASFCalories = Math.floor(parseFloat(document.getElementById('lunchASF_Calories').innerText)) || 0;
+    const ctrpCalories = Math.floor(parseFloat(document.getElementById('ctrpCalories').innerText)) || 0;
+    const asfCalories = Math.floor(parseFloat(document.getElementById('asfCalories').innerText)) || 0;
+    const breakfastFruitCalories = Math.floor(parseFloat(document.getElementById('breakfastFruit_Calories').innerText)) || 0;
+
+    const totalCalories =
+        snackPNSCalories +
+        snackFruitCalories +
+        dinnerCTRPCalories +
+        dinnerPNSCalories +
+        dinnerVeggieCalories +
+        lunchCTRPCalories +
+        lunchVeggieCalories +
+        lunchASFCalories +
+        ctrpCalories +
+        asfCalories +
+        breakfastFruitCalories;
+
+    const discretionaryCalories = 2300 - totalCalories;
+
+    document.getElementById('discretionaryCal').innerText = `${discretionaryCalories} Cal come from discretionary calories, fats, and oils added to meals during cooking. `;
+}
+
+// Initial update
+updateDiscretionaryCalories();
+
+</script>
+
+<!-- Function to update sum of calories -->
+<script>
+    // Function to update sum of calories
+    function updateTotalCalories() {
+        const lunchCTRPCalories = parseInt(document.getElementById('lunchCTRP_Calories').innerText) || 0;
+        const lunchVeggieCalories = parseInt(document.getElementById('lunchVeggie_Calories').innerText) || 0;
+        const lunchASFCalories = parseInt(document.getElementById('lunchASF_Calories').innerText) || 0;
+
+        const totalCalories = lunchCTRPCalories + lunchVeggieCalories + lunchASFCalories;
+        document.getElementById('lunchCal').innerText = `${totalCalories} Cal`;
+    }
+
+    // Event listeners for serving size select changes
+    document.getElementById('lunchCTRP_ServingSizeSelect').addEventListener('change', updateTotalCalories);
+    document.getElementById('lunchVeggie_ServingSizeSelect').addEventListener('change', updateTotalCalories);
+    document.getElementById('lunchASF_ServingSizeSelect').addEventListener('change', updateTotalCalories);
+
+    // Initial update
+    updateTotalCalories();
+    
+    
+</script>
+
+<script>
+    // Function to update sum of calories
+function updateTotalCalories() {
+    const ctrpCalories = parseInt(document.getElementById('ctrpCalories').innerText) || 0;
+    const asfCalories = parseInt(document.getElementById('asfCalories').innerText) || 0;
+    const breakfastFruitCalories = parseInt(document.getElementById('breakfastFruit_Calories').innerText) || 0;
+
+    const totalCalories = ctrpCalories + asfCalories + breakfastFruitCalories;
+    document.getElementById('breakfastCal').innerText = `${totalCalories} Cal`;
+}
+
+// Event listeners for serving size select changes
+document.getElementById('ctrpServingSizeSelect').addEventListener('change', updateTotalCalories);
+document.getElementById('asfServingSizeSelect').addEventListener('change', updateTotalCalories);
+document.getElementById('breakfastFruit_ServingSizeSelect').addEventListener('change', updateTotalCalories);
+
+// Initial update
+updateTotalCalories();
+</script>
+
+<script>
+// Function to update sum of calories
+function updateTotalCalories() {
+    const dinnerCTRPCalories = parseInt(document.getElementById('dinnerCTRP_Calories').innerText) || 0;
+    const dinnerPNSCalories = parseInt(document.getElementById('dinnerPNS_Calories').innerText) || 0;
+    const dinnerVeggieCalories = parseInt(document.getElementById('dinnerVeggie_Calories').innerText) || 0;
+
+    const totalCalories = dinnerCTRPCalories + dinnerPNSCalories + dinnerVeggieCalories;
+    document.getElementById('dinnerCal').innerText = `${totalCalories} Cal`;
+}
+
+// Event listeners for serving size select changes
+document.getElementById('dinnerCTRP_ServingSizeSelect').addEventListener('change', updateTotalCalories);
+document.getElementById('dinnerPNS_ServingSizeSelect').addEventListener('change', updateTotalCalories);
+document.getElementById('dinnerVeggie_ServingSizeSelect').addEventListener('change', updateTotalCalories);
+
+// Initial update
+updateTotalCalories();
+</script>
+
+<script>
+    // Function to update sum of snack calories
+function updateSnackCalories() {
+    const snackPNSCalories = parseInt(document.getElementById('snackPNS_Calories').innerText) || 0;
+    const snackFruitCalories = parseInt(document.getElementById('snackFruit_Calories').innerText) || 0;
+
+    const totalSnackCalories = snackPNSCalories + snackFruitCalories;
+    document.getElementById('snackCal').innerText = `${totalSnackCalories} Cal`;
+}
+
+// Event listeners for serving size select changes
+document.getElementById('snackPNS_ServingSizeSelect').addEventListener('change', updateSnackCalories);
+document.getElementById('snackFruit_ServingSizeSelect').addEventListener('change', updateSnackCalories);
+
+// Initial update
+updateSnackCalories();
+</script></div></div></div></div></div></div></div><style>
+    /* Bottom Navigation Styles */
+    .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.9); /* Initial background color */
+        display: none; /* Hide by default */
+        justify-content: space-around;
+        align-items: center;
+        height: 60px;
+        border-top: 1px solid #ccc;
+    }
+
+    .nav-item {
+        text-decoration: none;
+        color: #1DA1F2;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* Optional hover effect */
+    .nav-item:hover {
+        background-color: rgba(29, 161, 242, 0.3);
+    }
+
+    @media (max-width: 767px) {
+        /* Show the navigation only on devices with a maximum width of 767 pixels (typical mobile devices) */
+        .bottom-nav {
+            display: flex;
+        }
+    }
+</style>
+
+    <nav class="bottom-nav">
+        <a href="/index.html" class="nav-item">
+            <i class="icon ion-home text-dark" style="font-size: 2.5em;"></i></a>
+        
+        <a href="#" onclick='captureAndPrint()' class="nav-item"><svg id="saveDayPlan" class="icon icon-tabler icon-tabler-capture-filled d-flex align-items-center" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="text-align: center;width: 3em;height: 3em; color: 000000;">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M8 3a1 1 0 0 1 .117 1.993l-.117 .007h-2a1 1 0 0 0 -.993 .883l-.007 .117v2a1 1 0 0 1 -1.993 .117l-.007 -.117v-2a3 3 0 0 1 2.824 -2.995l.176 -.005h2z" stroke-width="0" fill="currentColor"></path>
+    <path d="M4 15a1 1 0 0 1 .993 .883l.007 .117v2a1 1 0 0 0 .883 .993l.117 .007h2a1 1 0 0 1 .117 1.993l-.117 .007h-2a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-2a1 1 0 0 1 1 -1z" stroke-width="0" fill="currentColor"></path>
+    <path d="M18 3a3 3 0 0 1 2.995 2.824l.005 .176v2a1 1 0 0 1 -1.993 .117l-.007 -.117v-2a1 1 0 0 0 -.883 -.993l-.117 -.007h-2a1 1 0 0 1 -.117 -1.993l.117 -.007h2z" stroke-width="0" fill="currentColor"></path>
+    <path d="M20 15a1 1 0 0 1 .993 .883l.007 .117v2a3 3 0 0 1 -2.824 2.995l-.176 .005h-2a1 1 0 0 1 -.117 -1.993l.117 -.007h2a1 1 0 0 0 .993 -.883l.007 -.117v-2a1 1 0 0 1 1 -1z" stroke-width="0" fill="currentColor"></path>
+    <path d="M12 8a4 4 0 1 1 -3.995 4.2l-.005 -.2l.005 -.2a4 4 0 0 1 3.995 -3.8z" stroke-width="0" fill="currentColor"></path>
+</svg></a>
+       
+        <a href="https://forms.office.com/r/t2biJkqRmv?origin=lprLink" class=" nav-item" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" style="width: 2em;height: 2em;color: black;margin-top: 8px;">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"></path>
+</svg></a>
+    </nav>
+
+<script>
+    // Nav Function
+    window.addEventListener('scroll', function() {
+        const bottomNav = document.querySelector('.bottom-nav');
+        const scrollPos = window.scrollY;
+
+        if (scrollPos > 0) {
+            // Scrolling up, make the navigation transparent
+            bottomNav.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
+        } else {
+            // Scrolling down, make the navigation fully opaque
+            bottomNav.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
+        }
+    });
+</script>
+<style>
+    /* Define unique styles for the new container */
+    #new-container {
+        position: fixed;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 10px;
+        margin-right: -48px; /* Adjust the margin-right as needed */
+        margin-top: 50px; /* Adjust the margin-right as needed */
+    }
+
+    /* Define unique styles for the new button */
+    .new-fixed-button {
+        background-color: rgba(255, 165, 0, 0.9); /* Your desired background color */
+        color: #ffffff; /* Your desired text color */
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transform: rotate(-90deg); /* Rotate 90 degrees anticlockwise */
+        white-space: nowrap; /* Prevent text from wrapping */
+    }
+
+    /* Media query to hide the new-container on small screens */
+    @media (max-width: 768px) {
+        #new-container {
+            display: none;
+        }
+    }
+</style>
+
+<!-- New container with a unique ID -->
+<div id="new-container" class="desktop-only">
+    <!-- New button with a unique class -->
+    <a href="https://forms.office.com/r/t2biJkqRmv?origin=lprLink" class="new-fixed-button" target="_blank">Leave a Feedback</a>
+</div>
+<style>
+    body {
+        /* Set background styles as per your design */
+        margin: 0;
+        padding: 0;
+        font-family: 'Nunito', sans-serif;
+    }
+
+    /* Define the desktop-only class for hiding on mobile */
+    .desktop-only {
+        display: none;
+    }
+
+    /* Define styles for the fixed button container */
+    .fixed-button-container {
+        position: fixed;
+        top: 90%;
+        right: 0;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 12px;
+        margin-right: -28px; /* Adjust the margin-right as needed */
+    }
+
+    /* Define styles for the fixed button */
+    .fixed-button {
+        background-color: rgba(23, 181, 130, 0.8); /* Your desired background color */
+        color: #ffffff; /* Your desired text color */
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transform: rotate(-90deg); /* Rotate 90 degrees anticlockwise */
+        white-space: nowrap; /* Prevent text from wrapping */
+    }
+
+    /* Media query to hide the fixed-button-container on small screens */
+    @media only screen and (max-width: 768px) {
+        .desktop-only {
+            display: none;
+        }
+    }
+</style>
+
+<div class="desktop-only fixed-button-container">
+    <a href="/index.html" class="fixed-button">Go to Home</a>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script><script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script><script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script><script src="/assets/js/script.min.js?h=d39169a6143bc38cba2f3dfbb15afe39"></script></body></html>
