@@ -1055,164 +1055,160 @@ document.getElementById('snackFruit_ServingSizeSelect').addEventListener('change
 
 // Initial update
 updateSnackCalories();
-</script></div></div></div></div></div></div></div><style>
-    /* Bottom Navigation Styles */
-    .bottom-nav {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: rgba(255, 255, 255, 0.9); /* Initial background color */
-        display: none; /* Hide by default */
-        justify-content: space-around;
-        align-items: center;
-        height: 60px;
-        border-top: 1px solid #ccc;
-    }
+</script></div></div></div></div></div></div></div>
 
-    .nav-item {
-        text-decoration: none;
-        color: #1DA1F2;
-        font-size: 14px;
-        padding: 10px;
-    }
+<div class="mainopShadow d-md-block d-lg-block d-xl-block d-xxl-block">
+    <div class="fab">
+        <div class="mainop d-flex justify-content-center align-items-center">
+      <svg xmlns="https://msosi.nyc3.cdn.digitaloceanspaces.com/Icon/add-svgrepo-com.svg" width="34" height="34" viewBox="0 0 24 24">
+        <path d="M12 5v14m-7-7h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
 
-    /* Optional hover effect */
-    .nav-item:hover {
-        background-color: rgba(29, 161, 242, 0.3);
-    }
 
-    @media (max-width: 767px) {
-        /* Show the navigation only on devices with a maximum width of 767 pixels (typical mobile devices) */
-        .bottom-nav {
-            display: flex;
-        }
-    }
-</style>
+        <div id="sheets" class="minifab op2" title="Go Home">
+        <a href="https://plateai.app/index.html">
+          <img class="minifabIcon" src="https://msosi.nyc3.cdn.digitaloceanspaces.com/Icon/home-1-svgrepo-com.svg">
+        </a>
 
-    <nav class="bottom-nav">
-        <a href="/index.html" class="nav-item">
-            <i class="icon ion-home text-dark" style="font-size: 2.5em;"></i></a>
-        
-        <a href="#" onclick='captureAndPrint()' class="nav-item"><svg id="saveDayPlan" class="icon icon-tabler icon-tabler-capture-filled d-flex align-items-center" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="text-align: center;width: 3em;height: 3em; color: 000000;">
-    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-    <path d="M8 3a1 1 0 0 1 .117 1.993l-.117 .007h-2a1 1 0 0 0 -.993 .883l-.007 .117v2a1 1 0 0 1 -1.993 .117l-.007 -.117v-2a3 3 0 0 1 2.824 -2.995l.176 -.005h2z" stroke-width="0" fill="currentColor"></path>
-    <path d="M4 15a1 1 0 0 1 .993 .883l.007 .117v2a1 1 0 0 0 .883 .993l.117 .007h2a1 1 0 0 1 .117 1.993l-.117 .007h-2a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-2a1 1 0 0 1 1 -1z" stroke-width="0" fill="currentColor"></path>
-    <path d="M18 3a3 3 0 0 1 2.995 2.824l.005 .176v2a1 1 0 0 1 -1.993 .117l-.007 -.117v-2a1 1 0 0 0 -.883 -.993l-.117 -.007h-2a1 1 0 0 1 -.117 -1.993l.117 -.007h2z" stroke-width="0" fill="currentColor"></path>
-    <path d="M20 15a1 1 0 0 1 .993 .883l.007 .117v2a3 3 0 0 1 -2.824 2.995l-.176 .005h-2a1 1 0 0 1 -.117 -1.993l.117 -.007h2a1 1 0 0 0 .993 -.883l.007 -.117v-2a1 1 0 0 1 1 -1z" stroke-width="0" fill="currentColor"></path>
-    <path d="M12 8a4 4 0 1 1 -3.995 4.2l-.005 -.2l.005 -.2a4 4 0 0 1 3.995 -3.8z" stroke-width="0" fill="currentColor"></path>
-</svg></a>
-       
-        <a href="https://forms.office.com/r/t2biJkqRmv?origin=lprLink" class=" nav-item" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" style="width: 2em;height: 2em;color: black;margin-top: 8px;">
-    <path d="M0 0h24v24H0z" fill="none"></path>
-    <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"></path>
-</svg></a>
-    </nav>
-
-<script>
-    // Nav Function
-    window.addEventListener('scroll', function() {
-        const bottomNav = document.querySelector('.bottom-nav');
-        const scrollPos = window.scrollY;
-
-        if (scrollPos > 0) {
-            // Scrolling up, make the navigation transparent
-            bottomNav.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
-        } else {
-            // Scrolling down, make the navigation fully opaque
-            bottomNav.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
-        }
-    });
-</script>
-<style>
-    /* Define unique styles for the new container */
-    #new-container {
-        position: fixed;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        padding: 10px;
-        margin-right: -48px; /* Adjust the margin-right as needed */
-        margin-top: 50px; /* Adjust the margin-right as needed */
-    }
-
-    /* Define unique styles for the new button */
-    .new-fixed-button {
-        background-color: rgba(255, 165, 0, 0.9); /* Your desired background color */
-        color: #ffffff; /* Your desired text color */
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-        transform: rotate(-90deg); /* Rotate 90 degrees anticlockwise */
-        white-space: nowrap; /* Prevent text from wrapping */
-    }
-
-    /* Media query to hide the new-container on small screens */
-    @media (max-width: 768px) {
-        #new-container {
-            display: none;
-        }
-    }
-</style>
-
-<!-- New container with a unique ID -->
-<div id="new-container" class="desktop-only">
-    <!-- New button with a unique class -->
-    <a href="https://forms.office.com/r/t2biJkqRmv?origin=lprLink" class="new-fixed-button" target="_blank">Leave a Feedback</a>
+        </div>
+        <div id="docs" class="minifab op1" title="Leave a Feedback">
+        <a href="https://forms.office.com/r/t2biJkqRmv?origin=lprLink" class="new-fixed-button" target="_blank">
+          <img class="minifabIcon" src="https://msosi.nyc3.cdn.digitaloceanspaces.com/Icon/comments-svgrepo-com.svg" alt="Leave a Feedback">
+        </a>
+        </div>
+    </div>
 </div>
 <style>
-    body {
-        /* Set background styles as per your design */
-        margin: 0;
-        padding: 0;
-        font-family: 'Nunito', sans-serif;
-    }
+    .fab {
+  background-color: transparent;
+  height: 64px;
+  width: 64px;
+  border-radius: 32px;
+  transition: height 300ms;
+  transition-timing-function: ease;
+  position: fixed;
+  right: 50px;
+  bottom: 70px;
+  text-align: center;
+  overflow: hidden;
+}
 
-    /* Define the desktop-only class for hiding on mobile */
-    .desktop-only {
-        display: none;
-    }
+.fab:hover {
+  height: 180px;
+}
 
-    /* Define styles for the fixed button container */
-    .fixed-button-container {
-        position: fixed;
-        top: 90%;
-        right: 0;
-        transform: translateY(-50%);
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        padding: 12px;
-        margin-right: -28px; /* Adjust the margin-right as needed */
-    }
+.fab:hover .mainop {
+  transform: rotate(180deg);
+}
 
-    /* Define styles for the fixed button */
-    .fixed-button {
-        background-color: rgba(23, 181, 130, 0.8); /* Your desired background color */
-        color: #ffffff; /* Your desired text color */
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-        transform: rotate(-90deg); /* Rotate 90 degrees anticlockwise */
-        white-space: nowrap; /* Prevent text from wrapping */
-    }
+.mainop {
+  margin: auto;
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: transform 300ms;
+  background-color: #F7CD34;
+  border-radius: 32px;
+    opacity: 1;
+  z-index: 6;
+}
 
-    /* Media query to hide the fixed-button-container on small screens */
-    @media only screen and (max-width: 768px) {
-        .desktop-only {
-            display: none;
-        }
-    }
+.mainopShadow {
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
+  position: fixed;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+@media (max-width: 767px) {
+  /* Small devices (tablets, 768px and below) */
+  .mainopShadow {
+    left: 50%;
+    transform: translateX(30%);
+    bottom: -50px; /* Adjust as needed */
+  }
+}
+@media (min-width: 768px) {
+  /* Medium devices (tablets, 768px and up) */
+  .mainopShadow {
+    right: 50px;
+    bottom: 70px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Large devices (desktops, 992px and up) */
+  .mainopShadow {
+    right: 50px;
+    bottom: 70px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Extra large devices (large desktops, 1200px and up) */
+  .mainopShadow {
+    right: 50px;
+    bottom: 70px;
+  }
+}
+
+@media (min-width: 1400px) {
+  /* Extra-extra large devices (larger desktops, 1400px and up) */
+  .mainopShadow {
+    right: 50px;
+    bottom: 70px;
+  }
+}
+
+.minifab {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  z-index: 5;
+  float: left;
+  margin-bottom: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+  background-color: blue;
+  transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.minifab:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.minifabIcon {
+  height: 24px;
+  width: 24px;
+  margin-top: 12px;
+}
+
+.op1 {
+  background-color: #35395C;
+}
+
+.op2 {
+  background-color: #ADD07F;
+}
+
+.op3 {
+  background-color: #fb0;
+}
+
+.op4 {
+  background-color: #dd5145;
+}
+
+.op5 {
+  background-color: #673ab7;
+}
+
 </style>
 
-<div class="desktop-only fixed-button-container">
-    <a href="/index.html" class="fixed-button">Go to Home</a>
-</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script><script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script><script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script><script src="/assets/js/script.min.js?h=d39169a6143bc38cba2f3dfbb15afe39"></script></body></html>
