@@ -1,201 +1,420 @@
-<!DOCTYPE html><html data-bs-theme="light" lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"><title>PlateAI</title><link rel="canonical" href="https://plateai.app/bmi.html"><meta property="og:url" content="https://plateai.app/bmi.html"><meta name="description" content="PlateAI is revolutionizing healthy eating approaches in Tanzania by offering personalized meal plans, and pre-paid meal kits  delivery."><link rel="icon" type="image/png" sizes="1200x1200" href="/assets/img/PlateAIFavIcon.png?h=d36e8a82040545202d1e75c32f1b1520"><link rel="icon" type="image/png" sizes="1200x1200" href="/assets/img/MsosiFavIcon.png?h=d4eac83f07adde241404fb9c77bb66e1" media="(prefers-color-scheme: dark)"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"><link rel="stylesheet" href="/assets/css/styles.min.css?h=f806eb3c755e2da58fde2a0daceafd52"></head><body><div class="container"><head>
+<!DOCTYPE html><html data-bs-theme="light" lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"><title>PlateAI - BMI Calculator</title><link rel="canonical" href="https://plateai.app/bmi.html"><meta property="og:url" content="https://plateai.app/bmi.html"><meta name="description" content=" PlateAI is helping Tanzanian to make informed dietary choices tailored to nutritional needs, preferences while taking into consideration availability of food in locality"><link rel="icon" type="image/png" sizes="1200x1200" href="https://msosi.nyc3.cdn.digitaloceanspaces.com/PlateAIFavIcon.png"><link rel="icon" type="image/png" sizes="1200x1200" href="https://msosi.nyc3.cdn.digitaloceanspaces.com/PlateAIFavIcon.png" media="(prefers-color-scheme: dark)"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"><link rel="stylesheet" href="/assets/css/styles.min.css?h=f806eb3c755e2da58fde2a0daceafd52"></head><body><div class="container"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap">
-  <style>
-    /* Your CSS styles here */
-    @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap");
+tps://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
+
+<style>
+    .c-bmi {
+    background-color: #ffffff;
+    border-radius: .25rem;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    padding: 1rem;
+    max-width: 40rem;
+    width: 100%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-top: 7vh;
+  }
+  .bmi_cal {
+    padding-top: 1rem;
+     padding-bottom: 1rem;
+    font-weight: 600;
+    color: gray;
+    text-align: center;
+    font-size: 1.5rem;
     
-    .box {
-      min-width: 400px;
-      background: #fafafa;
-      border-radius: 38px;
-      text-align: center;
-      position: relative;
-      margin-bottom: 150px;
-    }
-    
-    .input label {
-      display: block;
-      font-size: 18px;
-      font-weight: 600;
-      color: #000;
-      margin-bottom: 20px;
-    }
-    .input input {
-      outline: none;
-      border: none;
-      border-bottom: 1px solid #17B582;
-      width: 60%;
-      text-align: center;
-      font-size: 28px;
-      font-family: "Nunito", sans-serif;
-    }
-    button#calculate {
-      font-family: "Nunito", sans-serif;
-      color: #fff;
-      background: #17B582;
-      font-size: 16px;
-      border-radius: 12px;
-      padding: 12px 0;
-      width: 100%;
-      outline: none;
-      border: none;
-      transition: background 0.2s ease;
-    }
-    button#calculate:hover {
-      background: #17B520;
-    }
-    .result {
-      padding: 30px 20px;
-    }
-    .result p {
-      font-weight: 600;
-      font-size: 22px;
-      color: #000;
-      margin-bottom: 15px;
-    }
-    .result #result {
-      font-size: 36px;
-      font-weight: 900;
-      color: #17B580;
-      background-color: #eaeaea;
-      display: inline-block;
-      padding: 7px 20px;
-      border-radius: 55px;
-      margin-bottom: 25px;
-    }
-    #comment {
-      color: #000000;
-      font-weight: 800;
-    }
-    /* Youtube link */
-    .link {
-      position: fixed;
-      background-color: #d12322;
-      padding: 23px 40px;
-      right: -90px;
-      border-radius: 5px;
-      top: 50%;
-      transform: translateY(-50%);
-      transform: rotate(-90deg);
-      font-size: 18px;
-      font-weight: 500;
-      color: #fff;
-      text-decoration: none;
-      transition: all 0.1s ease-in-out;
-    }
-
-    .link i {
-      padding-left: 7px;
-    }
-
-    .link:hover {
-      text-decoration: underline;
-      background-color: black;
-    }
-  </style>
-
-  <!-- Bootstrap JS scripts -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-  <script>
-    // Your existing JavaScript function for BMI calculation
-    function calculateBMI() {
-      // Get height and weight values from the input fields
-      var height = document.getElementById('height').value;
-      var weight = document.getElementById('weight').value;
-
-      // Check if height and weight are provided
-      if (height === '' || weight === '') {
-        alert('Please enter both height and weight');
-        return;
-      }
-
-      // Calculate BMI
-      var heightInMeters = height / 100;
-      var bmi = weight / (heightInMeters * heightInMeters);
-
-      // Display the result
-      document.getElementById('result').innerText = bmi.toFixed(2);
-
-      // Provide a comment based on BMI value
-      var comment = '';
-      if (bmi < 18.5) {
-        comment = 'You are underweight. Focus on a nutrient-rich diet and consult with a healthcare professional for guidance.';
-      } else if (bmi >= 18.5 && bmi < 25) {
-        comment = 'Your weight is normal! Maintain it with a balanced diet and regular exercise.';
-      } else if (bmi >= 25 && bmi < 30) {
-        comment = 'You are overweight. Consider adopting a balanced diet and incorporating regular exercise into your routine';
-      } else {
-        comment = 'You are obese! Consult with a healthcare professional to create a personalized plan for weight management.';
-      }
-
-      document.querySelector('.comment').innerText = comment;
-
-      // Delay the modal appearance by 15 seconds
-      setTimeout(function() {
-        $('#myModal').modal('show');
-      }, 7000);
-    }
-  </script>
-</head>
-<body class="m-0" style="height: 100vh; background: url('https://digitshack.com/codepen/mentor1/pattern-background-desktop.svg'); background-size: cover; background-repeat: no-repeat; font-family: 'Nunito', sans-serif;">
-
-  <div class="justify-content-center" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -30%);">
-    <div class="box">
-      <h1 style="font-weight: bold; font-size: 36px; padding-top: 30px; padding-bottom: 0px;">BMI Calculator</h1>
-      <div style="padding: 0 40px;">
-        <div style="background: #fff; box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15); border-radius: 28px; padding-top: 16px; margin-bottom: 16px;">
-          <label for="height" style="display: block; font-size: 18px; font-weight: 600; color: #000; margin-bottom: 10px;">Height(cm)</label>
-          <input type="number" id="height" style="outline: none; border: none; border-bottom: 1px solid #17B582; width: 60%; text-align: center; font-size: 1.125rem; font-family: 'Nunito', sans-serif;">
-        </div>
-        <div style="background: #fff; box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15); border-radius: 28px; padding-top: 16px; margin-bottom: 16px;">
-          <label for="weight" style="display: block; font-size: 18px; font-weight: 600; color: #000; margin-bottom: 20px;">Weight(kg)</label>
-          <input type="number" id="weight" style="outline: none; border: none; border-bottom: 1px solid #17B582; width: 60%; text-align: center; font-size: 1.125rem; font-family: 'Nunito', sans-serif;">
-        </div>
-        <button id="calculate" onclick="calculateBMI();">Calculate BMI</button>
-      </div>
-      <div style="padding: 30px 20px;">
-        <p style="font-weight: 600; font-size: 22px; color: #000; margin-bottom: 15px;">Your BMI is</p>
-        <div id="result" style="font-size: 36px; font-weight: 900; color: #17B582; background-color: #eaeaea; display: inline-block; padding: 7px 20px; border-radius: 55px; margin-bottom: 25px;">00.00</div>
-        <p class="comment"></p>
-      </div>
-    </div>
-  </div>
+  }
+  .c-bmi fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .c-bmi__group-text {
+    display: none;
+    font-size: small;
+    order: 2;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
+  .c-bmi__groups {
+    border: 0;
+    flex-wrap: wrap;
+    font-size: x-small;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+  }
+  .c-bmi__groups label {
+    display: block;
+    padding: .5rem;
+    position: relative;
+  }
   
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
+  [for="bmi-g0"] { background-color: #35395C; color: #fff; }
+  [for="bmi-g1"] { background-color: #21AC78; color: #fff; }
+  [for="bmi-g2"] { background-color: #FAD11E; }
+  [for="bmi-g3"] { background-color: #F8B161; }
+  [for="bmi-g4"] { background-color: #ff6455; }
+  [for="bmi-g5"] { background-color: #cc1100; color: #fff; }
+  
+  .c-bmi__groups input:checked + label::before {
+    background-color: #fff;
+    clip-path: polygon(0% 0%,0% 100%,75.00% 50.00%);
+    content: '';
+    display: inline-block;
+    height: 1rem;
+    left: 0.5rem;
+    position: absolute;
+    top: 0.35rem;
+    width: 1rem;
+  }
+  .c-bmi__groups input:checked + label + div {
+    display: block;
+    flex: 0 0 100%;
+  }
+  .c-bmi__label {
+    display: block;
+    font-size: medium;
+    margin: 0 0 1rem 0;
+    position: relative;
+  }
+  .c-bmi__label output {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .c-bmi__range {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+  }
+  .c-bmi__range::-webkit-slider-runnable-track {
+    background-image: linear-gradient(to bottom, transparent 45%, lightslategray 45%, lightslategray 55%, transparent 55%);
+  }
+  .c-bmi__range::-moz-range-track {
+    background-image: linear-gradient(to bottom, transparent 45%, lightslategray 45%, lightslategray 55%, transparent 55%);
+  }
+  .c-bmi__range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #21192E;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+  }
+  .c-bmi__range::-moz-range-thumb {
+    appearance: none;
+    background-color: #35395C;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+  }
+  .c-bmi__range:focus::-webkit-slider-thumb {
+    background-color: #ffffff;
+    box-shadow: inset 0 0 0 0.25rem #21AC78;
+  }
+  .c-bmi__range:focus::-moz-range-thumb {
+    background-color: #FAD11E;
+    box-shadow: inset 0 0 0 0.25rem #21AC78;
+  }
+  .c-bmi__result {
+    display: block;
+    font-size: 200%;
+    margin-bottom: 1.5rem;
+    text-align: right;
+  }
+  .c-bmi [type="radio"] { display: none; }
+  
+  /* RWD */
+  @media (min-width: 600px) {
+    .c-bmi__groups { display: flex; }
+    .c-bmi__groups input:checked + label::before {
+      background-color: inherit;
+      clip-path: polygon(0% 0%,100% 0%,50% 100%);
+      left: 50%;
+      top: -1rem;
+      transform: translateX(-50%);
+      width: 1.5rem;
+    }
+    .c-bmi__groups label { flex: 1; }
+    [for="bmi-g0"] { border-radius: .25rem 0 0 .25rem; }
+    [for="bmi-g5"] { border-radius: 0 .25rem .25rem 0; }
+  }
+  
+  /* For this demo */
+  body { max-width: 40rem; margin: 1rem auto; }
+  .c-bmi__result {
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  
+  
+  
+  /* For FAB */
+        .fab {
+      background-color: transparent;
+      height: 64px;
+      width: 64px;
+      border-radius: 32px;
+      transition: height 300ms;
+      transition-timing-function: ease;
+      position: fixed;
+      right: 50px;
+      bottom: 70px;
+      text-align: center;
+      overflow: hidden;
+    }
     
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title">Plan meals, in your way</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body">
-          <p>Find balance with plans that align with Food-based dietary guidelines. Get started by clicking the button below.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
-          <a href="/plan.html" class="btn btn-warning">Get started</a>
-        </div>
-      </div>
-      
-    </div>
+    .fab:hover {
+      height: 180px;
+    }
+    
+    .fab:hover .mainop {
+      transform: rotate(180deg);
+    }
+    
+    .mainop {
+      margin: auto;
+      width: 64px;
+      height: 64px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transition: transform 300ms;
+      background-color: #F7CD34;
+      border-radius: 32px;
+        opacity: 1;
+      z-index: 6;
+    }
+    
+    .mainopShadow {
+      width: 64px;
+      height: 64px;
+      border-radius: 32px;
+      position: fixed;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+    
+    @media (max-width: 767px) {
+      /* Small devices (tablets, 768px and below) */
+      .mainopShadow {
+        left: 90%;
+        transform: translateX(30%);
+        bottom: -50px; /* Adjust as needed */
+      }
+    }
+    @media (min-width: 768px) {
+      /* Medium devices (tablets, 768px and up) */
+      .mainopShadow {
+        right: 50px;
+        bottom: 70px;
+      }
+    }
+    
+    @media (min-width: 992px) {
+      /* Large devices (desktops, 992px and up) */
+      .mainopShadow {
+        right: 50px;
+        bottom: 70px;
+      }
+    }
+    
+    @media (min-width: 1200px) {
+      /* Extra large devices (large desktops, 1200px and up) */
+      .mainopShadow {
+        right: 50px;
+        bottom: 70px;
+      }
+    }
+    
+    @media (min-width: 1400px) {
+      /* Extra-extra large devices (larger desktops, 1400px and up) */
+      .mainopShadow {
+        right: 50px;
+        bottom: 70px;
+      }
+    }
+    
+    .minifab {
+      position: relative;
+      width: 48px;
+      height: 48px;
+      border-radius: 4px;
+      z-index: 5;
+      float: left;
+      margin-bottom: 8px;
+      margin-left: 8px;
+      margin-right: 8px;
+      background-color: blue;
+      transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+    
+    .minifab:hover {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+    
+    .minifabIcon {
+      height: 24px;
+      width: 24px;
+      margin-top: 12px;
+    }
+    
+    .op1 {
+      background-color: #35395C;
+    }
+    
+    .op2 {
+      background-color: #ADD07F;
+    }
+    
+    .op3 {
+      background-color: #fb0;
+    }
+    
+    .op4 {
+      background-color: #dd5145;
+    }
+    
+    .op5 {
+      background-color: #673ab7;
+    }
+  /* For Header */
+    .logo {
+      width: 150px; /* Adjust the width as needed */
+      height: auto; /* Maintain aspect ratio */
+      display: flex; /* Ensure proper spacing */
+      margin: 0 auto; /* Center horizontally */
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); /* Add a drop shadow */
+      border-radius: 10px; /* Add rounded corners */
+      align-items: center;
+      max-width: 1100px;
+      margin-top: -12px;
+      margin-bottom: -32px;
+    }
+  /* For the button */
+  .button {
+    background-color: #2050ff;
+    text-align: center;
+    color: white;
+    width: 80px;
+    padding: 10px 16px;
+    margin: auto;
+    margin-top: 30px;
+    box-shadow: 0px 4px 4px -4px #c2c2c2;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  .button:hover {
+    background-color: #4070ff;
+  }
+  .button:active{
+    background-color: #2030ff;
+  }
+ 
+</style>
+<header>
+  <div class="logo">
+    <img class="logo" src="https://msosi.nyc3.cdn.digitaloceanspaces.com/PlateAI.png" alt="logo">
+
   </div>
+</header>
+<form class="c-bmi">
+    <div class="bmi_cal">BMI Calculator</div>
+  <label class="c-bmi__label"><strong>Height (cm)</strong>
+    <input class="c-bmi__range" type="range" name="h" min="150" max="230" step="0.5" value="180" />
+    <output name="ho"></output>
+  </label>
+  <label class="c-bmi__label"><strong>Weight (kg)</strong>
+    <input class="c-bmi__range" type="range" name="w" min="35" max="200" step="0.1" value="75" />
+    <output name="wo">75</output>
+  </label>
+  <div class="c-bmi__result">Your BMI is <output name="r"></output></div>
+  <div class="c-bmi__groups" readonly>
+    <input type="radio" id="bmi-g0" name="g" />
+    <label for="bmi-g0">Underweight</label>
+    <div class="c-bmi__group-text"><strong>You are underweight!</strong><br /> Focus on a nutrient-rich diet and consider consulting with a healthcare professional for personalized guidance.</div>
+    <input type="radio" id="bmi-g1" name="g" checked />
+    <label for="bmi-g1">Normal</label>
+    <div class="c-bmi__group-text"><strong>Congratulations! Your BMI falls within the normal range.</strong><br />Keep up the good work with your healthy lifestyle habits.</div>
+    <input type="radio" id="bmi-g2" name="g" />
+    <label for="bmi-g2">Overweight</label>
+    <div class="c-bmi__group-text"><strong>Your BMI suggests that you are overweight.</strong><br />Putting you at risk of developing obesity-related health issues. Focus on healthy eating habits and regular exercise to manage your weight effectively.</div>
+    <input type="radio" id="bmi-g3" name="g" />
+    <label for="bmi-g3">Obese I</label>
+    <div class="c-bmi__group-text"><strong>Your BMI indicates that you are obese — class I</strong><br /> It's crucial to take proactive steps to improve your health by adopting a balanced diet and increasing physical activity levels. Seeking guidance from a healthcare professional can also be beneficial.</div>
+    <input type="radio" id="bmi-g4" name="g" />
+    <label for="bmi-g4">Obese II</label>
+    <div class="c-bmi__group-text"><strong>Your BMI suggests obesity — class II</strong><br /> Thus, increasing the risk of various health problems.  It's important to prioritize your health by making lifestyle changes, including healthier eating habits and regular exercise.</div>
+    <input type="radio" id="bmi-g5" name="g" />
+    <label for="bmi-g5">Obese III</label>
+    <div class="c-bmi__group-text"><strong>Your BMI suggests obesity — class III</strong><br /> This can significantly impact your health and well-being. It's essential to take proactive steps to address your weight and improve your overall health.</div>
+  </div>
+</form>
+
+    <div class="mainopShadow d-md-block d-lg-block d-xl-block d-xxl-block">
+      <div class="fab">
+          <div class="mainop d-flex justify-content-center align-items-center">
+        <svg xmlns="https://msosi.nyc3.cdn.digitaloceanspaces.com/Icon/add-svgrepo-com.svg" width="34" height="34" viewBox="0 0 24 24">
+          <path d="M12 5v14m-7-7h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+  
+  
+          <div id="sheets" class="minifab op2" title="Go Home">
+          <a href="https://plateai.app/index.html" target="_blank">
+            <img class="minifabIcon" src="https://msosi.nyc3.cdn.digitaloceanspaces.com/Icon/home-1-svgrepo-com.svg">
+          </a>
+  
+          </div>
+          <div id="docs" class="minifab op1" title="Leave a Feedback">
+          <a href="https://forms.office.com/r/t2biJkqRmv?origin=lprLink" class="new-fixed-button" target="_blank">
+            <img class="minifabIcon" src="https://msosi.nyc3.cdn.digitaloceanspaces.com/Icon/comments-svgrepo-com.svg" alt="Leave a Feedback">
+          </a>
+          </div>
+      </div>
+  </div>
+<div class="button info-button">Info <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: -4px; margin-left: 3px;">
+  <g id="24 / notifications / question-circle">
+  <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12ZM12.0003 16.9983C12.5528 16.9983 13.0007 16.5506 13.0007 15.9983C13.0007 15.4461 12.5528 14.9983 12.0003 14.9983C11.4479 14.9983 11 15.4461 11 15.9983C11 16.5506 11.4479 16.9983 12.0003 16.9983ZM11 14H13C13 13.2016 13.1254 13.0553 13.9472 12.6444C15.3754 11.9303 16 11.2016 16 9.5C16 7.32063 14.2843 6 12 6C9.79086 6 8 7.79086 8 10H10C10 8.89543 10.8954 8 12 8C13.2772 8 14 8.55641 14 9.5C14 10.2984 13.8746 10.4447 13.0528 10.8556C11.6246 11.5697 11 12.2984 11 14Z" fill="white"/></g>
+      </svg>
+    </div>
+<script>
+  function B() {
+  const e = this.h.valueAsNumber;
+  const t = this.w.valueAsNumber;
+  const i = parseFloat((t / (e / 100) ** 2)).toFixed(2);
+
+  const h = [
+    [0, 18.49],
+    [18.5, 24.99],
+    [25, 29.99],
+    [30, 34.99],
+    [35, 39.99],
+    [40, 100]
+  ].findIndex(e => e[0] <= i && i < e[1]);
+
+  let o = e.toFixed(0);
+
+  this.ho.value = `${o} cm`;
+  this.wo.value = `${t} kg`;
+  this.g[h].checked = true;
+  this.r.value = i;
+}
+
+const bmi = document.querySelector('.c-bmi');
+bmi.addEventListener('input', B);
+bmi.dispatchEvent(new Event('input'));
+
+</script>
 
 </body>
-
-<div class="modal fade firstBlur" role="dialog" tabindex="-1" id="modal-1"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">Plan meals, in your way</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>Find balance with plans that align with Food-based dietary guidelines. Get started by clicking the button below.</p></div><div class="modal-footer"><button class="btn btn-light btn-close" type="button" data-bs-dismiss="modal">Close</button><a class="btn btn-warning" role="button" href="/plan.html">Get started</a></div></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script><script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script><script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script><script src="/assets/js/script.min.js?h=d39169a6143bc38cba2f3dfbb15afe39"></script></body></html>
